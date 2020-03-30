@@ -1,0 +1,59 @@
+.button {
+  position: relative;
+  width: fit-content;
+  cursor: pointer;
+  height: 41px;
+  top: 6px;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 40px;
+  margin-left: 25px;
+  float:left;
+
+  text-align: center;
+  letter-spacing: 0.04em;
+  box-sizing: unset;
+  color: #FFFFFF;
+}
+
+.button.active, .button:hover{
+  border-bottom: solid;
+}
+
+.button.auth {
+  float: right;
+  font-family: Roboto;
+  font-style: normal;
+  font-size: 16px;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-bottom: 3px;
+  border: solid;
+  border-radius: 10px;
+  height: 30px;
+  line-height: 34px;
+  border-width: 1.25px;
+  text-align: center;
+  letter-spacing: 0.04em;
+  margin-right: 10px;
+  margin-left: 0px;
+}
+
+.button.auth.primary {
+  font-weight: 900;
+  border-color: #000AFF;
+  background: #000AFF;
+}
+
+.button.auth:hover {
+  background: #0030aa;
+}
+.button.auth.primary:hover {
+  background: rgb(0, 81, 255)
+}
+
+.button:active{
+  opacity: 0.8;
+}
