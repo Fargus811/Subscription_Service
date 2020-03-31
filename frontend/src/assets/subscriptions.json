@@ -1,0 +1,44 @@
+{
+  "subscriptions": [
+    {
+      "name": "Netflix",
+      "price": 26,
+      "description": [
+        "Access to more than 150 TV-series",
+        "Educational materials",
+        "Subtitles for 34 languages",
+        "Live streams and concert recordings"
+      ]
+    },
+    {
+      "name": "Kinopoisk",
+      "price": 14,
+      "description": [
+        "7 thousand films, series, cartoons",
+        "Lorem ipsum dolor sit amet",
+        "Ut enim ad minim veniam",
+        "Excepteur sint occaecat cupidatat non proident"
+      ]
+    },
+    {
+      "name": "Voka",
+      "price": 32,
+      "description": [
+        "Pulvinar mattis nunc sed blandit",
+        "Nulla pharetra diam sit amet",
+        "Ultricies tristique nulla",
+        "Est placerat in egestas erat"
+      ]
+    },
+    {
+      "name": "Okko",
+      "price": 21,
+      "description": [
+        "Malesuada pellentesque elit eget",
+        "Amet risus nullam eget",
+        "Commodo nulla facilisi",
+        "Quam pellentesque nec nam aliquam"
+      ]
+    }
+  ]
+}

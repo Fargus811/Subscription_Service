@@ -1,11 +1,14 @@
 <div class='header' style="z-index:2">
   <div class='site-name'>SUBU</div>
-  <div class='button active'>Home</div>
-  <div class='button'>Catalog</div>
-  <div class='button'>Partnership</div>
+    <div *ngIf="href==''" class='button active'>Home</div>
+    <a *ngIf="href!=''" class='button' href="">Home</a>
+    <div *ngIf="href=='/catalog'" class='button active'>Catalog</div>
+    <a *ngIf="href!='/catalog'" class='button' href="catalog">Catalog</a>
+    <div *ngIf="href=='/partnership'" class='button active'>Partnership</div>
+    <a *ngIf="href!='/partnership'" class='button' href="partnership">Partnership</a>
   <div class="auth-block unauthorized">
-    <div class='button auth primary'>SIGN UP</div>
-    <div class='button auth secondary'>SIGN IN</div>
+    <a class='button auth primary' href="signup">SIGN UP</a>
+    <a class='button auth secondary' href="signin">SIGN IN</a>
   </div>
 </div>
 <div class="header-correction"></div>

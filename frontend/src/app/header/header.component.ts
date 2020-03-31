@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { Location } from '@angular/common';
 
 @Component({
   selector: 'app-header',
@@ -7,12 +7,13 @@ import { Router } from '@angular/router';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent implements OnInit {
-  href = '';
-  constructor(private router: Router) { }
+  href: string;
+  constructor(
+    private location: Location
+    ) { }
 
   ngOnInit(): void {
-    this.href = this.router.url;
-    console.log(this.href);
+    this.href = this.location.path();
   }
 
 }
