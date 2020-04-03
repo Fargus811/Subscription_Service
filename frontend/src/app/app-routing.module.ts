@@ -5,6 +5,7 @@ import { CatalogComponent } from './catalog/catalog.component';
 import { PartnershipPageComponent } from './partnership-page/partnership-page.component';
 import { LoginPageComponent } from './login-page/login-page.component';
 import { RegistrationPageComponent} from './registration-page/registration-page.component';
+import { ProfilePageComponent} from './profile-page/profile-page.component';
 
 
 const routes: Routes = [
@@ -12,7 +13,8 @@ const routes: Routes = [
   { path: 'catalog', component: CatalogComponent },
   { path: 'partnership', component: PartnershipPageComponent },
   { path: 'signin' , component: LoginPageComponent },
-  { path: 'signup' , component: RegistrationPageComponent}
+  { path: 'signup' , component: RegistrationPageComponent},
+  { path: 'profile' , component: ProfilePageComponent}
 ];
 
 @NgModule({

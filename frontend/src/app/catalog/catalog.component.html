@@ -1,59 +1,11 @@
 <div class="container" style="margin-top: 50px; margin-bottom: 40%; ">
   <div class="row justify-content-around">
-    <div class="col-3">
+    <div *ngFor="let item of subscriptions | async" class="col-3">
       <div class="subbackground">
-        <p class="subname">Netflix</p>
-        <p class="price">$26/month</p>
+        <p class="subname">{{item['name']}}</p>
+        <p class="price">$ {{item['price']}} /month</p>
         <ul>
-          <li>Access to more than 150 TV-series</li>
-          <li>Educational materials</li>
-          <li>Subtitles for 34 languages</li>
-          <li>Live streams and concert recordings  </li>
-        </ul>
-        <div class="row justify-content-center">
-          <div class="button subbutton">Subscribe</div>
-        </div>
-      </div>
-    </div>
-    <div class="col-3">
-      <div class="subbackground">
-        <p class="subname">Kinopoisk</p>
-        <p class="price">$26/month</p>
-        <ul>
-          <li>Access to more than 150 TV-series</li>
-          <li>Educational materials</li>
-          <li>Subtitles for 34 languages</li>
-          <li>Live streams and concert recordings  </li>
-        </ul>
-        <div class="row justify-content-center">
-          <div class="button subbutton">Subscribe</div>
-        </div>
-      </div>
-    </div>
-    <div class="col-3">
-      <div class="subbackground">
-        <p class="subname">VOKA</p>
-        <p class="price">$36/month</p>
-        <ul>
-          <li>Access to more than 150 TV-series</li>
-          <li>Educational materials</li>
-          <li>Subtitles for 34 languages</li>
-          <li>Live streams and concert recordings  </li>
-        </ul>
-        <div class="row justify-content-center">
-          <div class="button subbutton">Subscribe</div>
-        </div>
-      </div>
-    </div>
-     <div class="col-3">
-      <div class="subbackground">
-        <p class="subname">Okko</p>
-        <p class="price">$24/month</p>
-        <ul>
-          <li>Access to more than 150 TV-series</li>
-          <li>Educational materials</li>
-          <li>Subtitles for 34 languages</li>
-          <li>Live streams and concert recordings  </li>
+          <li *ngFor="let line of item['description']">{{line}}</li>
         </ul>
         <div class="row justify-content-center">
           <div class="button subbutton">Subscribe</div>

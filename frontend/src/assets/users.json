@@ -1,0 +1,20 @@
+[
+  {
+    "email": "ggas@gmail.com",
+    "password": "40ofariv",
+    "role": "user",
+    "display-name": "Daniil S."
+  },
+  {
+    "email": "netflix@gmail.com",
+    "password": "netflix",
+    "role": "company",
+    "display-name": "NETFLIX"
+  },
+  {
+    "email": "admin@gmail.com",
+    "password": "admin",
+    "role": "admin",
+    "display-name": "Admin"
+  }
+]

@@ -1,14 +1,22 @@
 <div class='header' style="z-index:2">
   <div class='site-name'>SUBU</div>
-    <div *ngIf="href==''" class='button active'>Home</div>
-    <a *ngIf="href!=''" class='button' href="">Home</a>
-    <div *ngIf="href=='/catalog'" class='button active'>Catalog</div>
-    <a *ngIf="href!='/catalog'" class='button' href="catalog">Catalog</a>
-    <div *ngIf="href=='/partnership'" class='button active'>Partnership</div>
-    <a *ngIf="href!='/partnership'" class='button' href="partnership">Partnership</a>
-  <div class="auth-block unauthorized">
-    <a class='button auth primary' href="signup">SIGN UP</a>
-    <a class='button auth secondary' href="signin">SIGN IN</a>
-  </div>
+    <div *ngIf="currentPath==''; else homeInactive" class='button active'>Home</div>
+    <ng-template #homeInactive><a class='button' routerLink="">Home</a></ng-template>
+    <div *ngIf="currentPath=='/catalog'; else catalogInactive" class='button active'>Catalog</div>
+    <ng-template #catalogInactive><a class='button' routerLink="catalog">Catalog</a></ng-template>
+    <div *ngIf="currentPath=='/partnership'; else partnershipInactive" class='button active'>Partnership</div>
+    <ng-template #partnershipInactive><a class='button' routerLink="partnership">Partnership</a></ng-template>
+    <div class="listener" (sessionsModified)="checkUser()" hidden></div>
+    {{user}}
+    <div *ngIf="user; else unauthorized" class="user-block authorized">
+      <div class="username">{{user.displayname}}</div>
+      <div class = 'userbox'></div>
+    </div>
+    <ng-template #unauthorized>
+      <div class="user-block unauthorized">
+        <a class='button auth primary' routerLink="signup">SIGN UP</a>
+        <a class='button auth secondary' routerLink="signin">SIGN IN</a>
+      </div>
+    </ng-template>
 </div>
 <div class="header-correction"></div>

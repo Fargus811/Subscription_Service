@@ -1,0 +1,16 @@
+.partnerbackground{
+  height: 500px;
+  width:100%;
+  overflow: hidden;
+}
+.strings{
+  position: relative;
+  font-family: Roboto;
+  font-size: medium;
+  font-weight: 600;
+  z-index: 1;
+  top: -800px;
+  padding-left: 40px;
+  padding-right: 40px;
+  color:white ;
+}

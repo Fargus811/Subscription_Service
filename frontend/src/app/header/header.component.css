@@ -13,6 +13,7 @@
   background: white;
 }
 
+
 .site-name {
   position: relative;
   width: 40px;
@@ -33,5 +34,21 @@
   box-sizing: unset;
   color: #FFFFFF;
 }
+.userbox{
+  position: relative;
+  width: 218px;
+  height: 148px;
+  left: calc(100% - 218px);
+  top: 50px;
+  background-color: #00034F;
+  visibility: hidden;
+  transition: all 0.5s ease 0.5s;
+}
 
+.username:hover~.userbox,
+.userbox:hover
+{
+  visibility: visible;
+  transition: all 0.5s ease-in-out 0s;
+}
 

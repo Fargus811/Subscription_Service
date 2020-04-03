@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { HttpClient} from '@angular/common/http';
 
 @Component({
   selector: 'app-catalog',
@@ -6,9 +7,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./catalog.component.css']
 })
 export class CatalogComponent implements OnInit {
-  constructor() { }
+  subscriptions: any;
+
+  constructor(private http: HttpClient ) { }
 
   ngOnInit(): void {
+    this.subscriptions = this.http.get('/assets/subscriptions.json');
   }
 
 }
