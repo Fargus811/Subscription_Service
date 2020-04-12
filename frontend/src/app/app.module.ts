@@ -14,6 +14,8 @@ import { RegistrationPageComponent } from './registration-page/registration-page
 import { ProfilePageComponent } from './profile-page/profile-page.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { LocalstorageService } from './localstorage.service';
+import { MysubscriptionsPageComponent } from './mysubscriptions-page/mysubscriptions-page.component';
+import { MywalletPageComponent } from './mywallet-page/mywallet-page.component';
 
 @NgModule({
   declarations: [
@@ -26,6 +28,8 @@ import { LocalstorageService } from './localstorage.service';
     LoginPageComponent,
     RegistrationPageComponent,
     ProfilePageComponent,
+    MysubscriptionsPageComponent,
+    MywalletPageComponent,
   ],
   imports: [
     BrowserModule,

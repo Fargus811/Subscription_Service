@@ -45,5 +45,6 @@ export class HeaderComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    this.checkUser();
   }
 }

@@ -6,7 +6,8 @@ import { PartnershipPageComponent } from './partnership-page/partnership-page.co
 import { LoginPageComponent } from './login-page/login-page.component';
 import { RegistrationPageComponent} from './registration-page/registration-page.component';
 import { ProfilePageComponent} from './profile-page/profile-page.component';
-
+import { MysubscriptionsPageComponent} from './mysubscriptions-page/mysubscriptions-page.component';
+import { MywalletPageComponent} from './mywallet-page/mywallet-page.component';
 
 const routes: Routes = [
   { path: '', component: HomePageComponent },
@@ -14,7 +15,9 @@ const routes: Routes = [
   { path: 'partnership', component: PartnershipPageComponent },
   { path: 'signin' , component: LoginPageComponent },
   { path: 'signup' , component: RegistrationPageComponent},
-  { path: 'profile' , component: ProfilePageComponent}
+  { path: 'profile' , component: ProfilePageComponent},
+  { path: 'mysubscriptions' , component : MysubscriptionsPageComponent},
+  { path: 'mywallet', component : MywalletPageComponent}
 ];
 
 @NgModule({

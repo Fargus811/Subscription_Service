@@ -2,11 +2,11 @@ import { Component, OnInit } from '@angular/core';
 import { LocalstorageService } from '../localstorage.service';
 
 @Component({
-  selector: 'app-profile-page',
-  templateUrl: './profile-page.component.html',
-  styleUrls: ['./profile-page.component.css']
+  selector: 'app-mysubscriptions-page',
+  templateUrl: './mysubscriptions-page.component.html',
+  styleUrls: ['./mysubscriptions-page.component.css']
 })
-export class ProfilePageComponent implements OnInit {
+export class MysubscriptionsPageComponent implements OnInit {
   user: any;
 
   constructor(private sessionstorage: LocalstorageService) { }
@@ -14,6 +14,4 @@ export class ProfilePageComponent implements OnInit {
   ngOnInit(): void {
     const token = localStorage.getItem('token');
     this.user = this.sessionstorage.getSession(token);
-  }
-
-}
+  }}

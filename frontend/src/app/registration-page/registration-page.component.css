@@ -1,0 +1,25 @@
+.container{
+  position: relative;
+width: 450px;
+height: 580px;
+top: 50px;
+margin-bottom: 50px;
+padding: 50px 50px 50px 50px;
+
+background: #FFFFFF;
+border: 1px solid rgba(0, 0, 0, 0.5);
+box-sizing: border-box;
+}
+.formheader{
+margin-bottom: 20px;
+font-family: Roboto;
+font-style: normal;
+font-weight: bold;
+font-size: 35px;
+line-height: 35px;
+/* identical to box height, or 150% */
+
+letter-spacing: -0.015em;
+
+color: #000000;
+}

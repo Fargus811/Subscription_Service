@@ -1,16 +1,23 @@
 <div class='header' style="z-index:2">
-  <div class='site-name'>SUBU</div>
-    <div *ngIf="currentPath==''; else homeInactive" class='button active'>Home</div>
-    <ng-template #homeInactive><a class='button' routerLink="">Home</a></ng-template>
+  <div *ngIf="currentPath==''; else homeInactive" class='site-name' >SUBU</div>
+  <ng-template #homeInactive><a class='site-name' routerLink="">SUBU</a></ng-template>
     <div *ngIf="currentPath=='/catalog'; else catalogInactive" class='button active'>Catalog</div>
     <ng-template #catalogInactive><a class='button' routerLink="catalog">Catalog</a></ng-template>
     <div *ngIf="currentPath=='/partnership'; else partnershipInactive" class='button active'>Partnership</div>
     <ng-template #partnershipInactive><a class='button' routerLink="partnership">Partnership</a></ng-template>
     <div class="listener" (sessionsModified)="checkUser()" hidden></div>
-    {{user}}
-    <div *ngIf="user; else unauthorized" class="user-block authorized">
+    <div *ngIf="user; else unauthorized"  class="user-block authorized">
       <div class="username">{{user.displayname}}</div>
-      <div class = 'userbox'></div>
+      <img src="assets/provile.png" alt="Profile-Img" style="float: right;width: 60px; margin-top: 5px;" >
+      <div class = 'userbox'>
+        <div *ngIf="currentPath=='/profile'; else homeInactive" class='button active'>Profile</div>
+        <ng-template #homeInactive><a class='button' routerLink="profile">Profile</a></ng-template>
+        <div *ngIf="currentPath=='/mysubscriptions'; else catalogInactive" class='button active'>My subscriptions</div>
+        <ng-template #catalogInactive><a class='button' routerLink="mysubscriptions">My subscriptions</a></ng-template>
+        <div *ngIf="currentPath=='/mywallet'; else walletInactive" class='button active'>My wallet</div>
+        <ng-template #walletInactive><a class='button' routerLink="mywallet">My wallet</a></ng-template>
+        <a class="button" routerLink="">LogOut</a>
+      </div>
     </div>
     <ng-template #unauthorized>
       <div class="user-block unauthorized">

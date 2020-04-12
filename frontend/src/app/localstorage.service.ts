@@ -1,11 +1,12 @@
 import { Injectable } from '@angular/core';
 import { users } from '../assets/users';
+import { sessions } from '../assets/sessions';
 
 @Injectable({
   providedIn: 'root'
 })
 export class LocalstorageService {
-  private sessions: Map<string, any> = new Map<string, any>();
+  private sessions = sessions;
   constructor() {
     console.log('initialized service');
    }

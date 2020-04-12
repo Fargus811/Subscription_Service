@@ -35,7 +35,7 @@
   color: #FFFFFF;
 }
 .userbox{
-  position: relative;
+  position: absolute;
   width: 218px;
   height: 148px;
   left: calc(100% - 218px);
@@ -44,7 +44,30 @@
   visibility: hidden;
   transition: all 0.5s ease 0.5s;
 }
+.profileimg{
+  position: absolute;
+  width: 50px;
+  float: right;
+  margin-left: 1200px;
+  background-color: #00034F;
+}
+.username{
+  position: relative;
+  width: fit-content;
+  cursor: pointer;
+  height: 41px;
+  top: 6px;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 40px;
+  margin-left: 5px;
+  float: right;
+  margin-right: 15px;
+  color: azure;
 
+}
 .username:hover~.userbox,
 .userbox:hover
 {
