@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
-import { users } from '../assets/users';
-import { sessions } from '../assets/sessions';
+import { users } from '../../assets/users';
+import { sessions } from '../../assets/sessions';
 
 @Injectable({
   providedIn: 'root'

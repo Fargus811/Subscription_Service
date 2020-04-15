@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { LocalstorageService } from '../localstorage.service';
+import { LocalstorageService } from '../../services/localstorage.service';
 import { HttpClient } from '@angular/common/http';
-
+import { cards } from './cards';
 
 @Component({
   selector: 'app-mywallet-page',
@@ -20,5 +20,12 @@ export class MywalletPageComponent implements OnInit {
   ngOnInit(): void {
     const token = localStorage.getItem('token');
     this.user = this.sessionstorage.getSession(token);
-    this.cards = this.http.get('/assets/cards.js');
-  }}
+    this.cards = cards;
+  }
+  openModal(){
+    document.querySelector('.modal').classList.add('open');
+  }
+  closeModal(){
+    document.querySelector('.modal').classList.remove('open');
+  }
+}

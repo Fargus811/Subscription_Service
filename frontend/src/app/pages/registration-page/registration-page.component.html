@@ -1,6 +1,15 @@
 <div class = "row justify-content-cener" style="margin-bottom: 50px;">
   <div class ="container">
     <div class="formheader">Sign Up</div>
+    <div class="btn-group btn-group-toggle" data-toggle="buttons">
+      <label id="option1" class="btn btn-secondary active">
+        <input type="radio" name="options" (click)="changeRegistrationType(false)"> As user
+      </label>
+      <label id="option2" class="btn btn-secondary">
+        <input type="radio" name="options" (click)="changeRegistrationType(true)"> As company
+      </label>
+
+    </div>
     <form [formGroup]="registerForm">
       <div class="form-group">
         <label for="InputEmail">Email</label>
@@ -16,7 +25,7 @@
         <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
       </div>
       <div class="form-group">
-        <label for="InputLogin">Name</label>
+        <label for="InputLogin">{{displayedInputName}}</label>
         <input formControlName="name" type="text" class="form-control" id="name" placeholder="name">
         <span class="text-danger"
             *ngIf="(registerFormControl.name.touched || submitted) && registerFormControl.name.errors?.required">

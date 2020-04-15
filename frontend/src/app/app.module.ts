@@ -3,19 +3,20 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { HomePageComponent } from './home-page/home-page.component';
+import { HomePageComponent } from './pages/home-page/home-page.component';
 import { HttpClientModule } from '@angular/common/http';
 import { HeaderComponent } from './header/header.component';
-import { CatalogComponent } from './catalog/catalog.component';
-import { PartnershipPageComponent } from './partnership-page/partnership-page.component';
+import { CatalogComponent } from './pages/catalog-page/catalog-page.component';
+import { PartnershipPageComponent } from './pages/partnership-page/partnership-page.component';
 import { FooterComponent } from './footer/footer.component';
-import { LoginPageComponent } from './login-page/login-page.component';
-import { RegistrationPageComponent } from './registration-page/registration-page.component';
-import { ProfilePageComponent } from './profile-page/profile-page.component';
+import { LoginPageComponent } from './pages/login-page/login-page.component';
+import { RegistrationPageComponent } from './pages/registration-page/registration-page.component';
+import { ProfilePageComponent } from './pages/profile-page/profile-page.component';
 import { ReactiveFormsModule } from '@angular/forms';
-import { LocalstorageService } from './localstorage.service';
-import { MysubscriptionsPageComponent } from './mysubscriptions-page/mysubscriptions-page.component';
-import { MywalletPageComponent } from './mywallet-page/mywallet-page.component';
+import { LocalstorageService } from './services/localstorage.service';
+import { MysubscriptionsPageComponent } from './pages/mysubscriptions-page/mysubscriptions-page.component';
+import { MywalletPageComponent } from './pages/mywallet-page/mywallet-page.component';
+import { CardFormComponent } from './components/card-form/card-form.component';
 
 @NgModule({
   declarations: [
@@ -30,6 +31,7 @@ import { MywalletPageComponent } from './mywallet-page/mywallet-page.component';
     ProfilePageComponent,
     MysubscriptionsPageComponent,
     MywalletPageComponent,
+    CardFormComponent,
   ],
   imports: [
     BrowserModule,

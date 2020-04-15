@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Validators, FormGroup, FormBuilder } from '@angular/forms';
-import { ValidationService } from '../validation.service';
+import { ValidationService } from '../../services/validation.service';
 
 @Component({
   selector: 'app-registration-page',
@@ -10,6 +10,7 @@ import { ValidationService } from '../validation.service';
 export class RegistrationPageComponent implements OnInit {
   registerForm: FormGroup;
   submitted = false;
+  displayedInputName = 'Name';
 
   constructor(
     private fb: FormBuilder,
@@ -39,6 +40,18 @@ export class RegistrationPageComponent implements OnInit {
     if (this.registerForm.valid) {
       alert('Form Submitted succesfully!!!\n Check the values in browser console.');
       console.table(this.registerForm.value);
+    }
+  }
+
+  changeRegistrationType(type: boolean){
+    if (type) {
+      this.displayedInputName = 'Company Name';
+      document.querySelector('#option2').classList.add('active');
+      document.querySelector('#option1').classList.remove('active');
+    } else {
+      this.displayedInputName = 'Name';
+      document.querySelector('#option1').classList.add('active');
+      document.querySelector('#option2').classList.remove('active');
     }
   }
 }

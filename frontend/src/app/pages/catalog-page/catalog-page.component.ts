@@ -3,8 +3,8 @@ import { HttpClient, HttpResponse} from '@angular/common/http';
 
 @Component({
   selector: 'app-catalog',
-  templateUrl: './catalog.component.html',
-  styleUrls: ['./catalog.component.css']
+  templateUrl: './catalog-page.component.html',
+  styleUrls: ['./catalog-page.component.css']
 })
 export class CatalogComponent implements OnInit {
   subscriptions: any;
@@ -13,6 +13,7 @@ export class CatalogComponent implements OnInit {
 
   ngOnInit(): void {
     this.subscriptions = this.http.get('/assets/subscriptions.json');
+
   }
 
 }

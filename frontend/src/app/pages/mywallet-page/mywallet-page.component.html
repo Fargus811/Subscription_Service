@@ -29,8 +29,12 @@
                       <!--Wallet-->
                       <aside class="wallet">
                         <h2>My Wallets</h2>
-                        <div class="modal-control">+</div>
-                        <div *ngFor="let card of cards" class="cards">{{card}}</div>
+                        <div class="modal-control" (click)="openModal()">+</div>
+                        <div *ngFor="let card of cards" class="credit-card {{card.type}}">
+                          <div class="card-image"></div>
+                          <div class="credit-card_number">{{card.number}}</div>
+                          <div class="credit-card_expiration">Valid Thru:{{card.expiration}}</div>
+                        </div>
                       </aside>
 
                       <content class="transactions-wrapper">
@@ -47,13 +51,10 @@
                   <div class="modal">
                     <div class="modal-body">
                       <h3>Add New Card</h3>
-                      <div class="modal-close">+</div>
-                      <div class="card-list">
-                        <div class="card-image visa"></div>
-                        <div class="card-image amex"></div>
-                        <div class="card-image mc"></div>
-                      </div>
+                      <div class="modal-close" (click)="closeModal()">+</div>
+                      <app-card-form></app-card-form>
                     </div>
+                    <div class="modal background" (click)="closeModal()"></div>
                   </div>
 
 

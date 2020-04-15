@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Location } from '@angular/common';
 import { Router } from '@angular/router';
-import { LocalstorageService } from '../localstorage.service';
-import { LogindetectorService } from '../logindetector.service';
+import { LocalstorageService } from '../services/localstorage.service';
+import { LogindetectorService } from '../services/logindetector.service';
 
 @Component({
   selector: 'app-header',

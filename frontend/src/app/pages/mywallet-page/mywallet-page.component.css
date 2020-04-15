@@ -618,6 +618,7 @@ body {
 
 h2 {
     margin: 0px;
+    margin-bottom: 20px;
     font-weight: 400;
     color: #707584;
     font: 24px/24px 'Open Sans', sans-serif;
@@ -849,15 +850,19 @@ h3 {
 
 .modal {
     display: none;
-    position: fixed;
-    width: 100vw;
-    height: 100vh;
-    background-color: rgba(0,0,0,0.7);
-    z-index: 1;
-    top: 0;
-    left: 0;
     text-align: center;
     transition: .2s;
+}
+
+.modal.background{
+  display:block;
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0,0,0,0.7);
+  z-index: 1;
+  top: 0;
+  left: 0;
 }
 
 .modal.open {
@@ -870,9 +875,9 @@ h3 {
     padding: 35px 15px 25px;
     z-index: 2;
     display: inline-block;
-    margin-top: 20%;
+    margin-top: 5%;
     width: 100%;
-    max-width: 400px;
+    max-width: 700px;
     position: relative;
 }
 

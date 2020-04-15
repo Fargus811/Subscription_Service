@@ -1,8 +1,8 @@
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
-import { LocalstorageService} from '../localstorage.service';
+import { LocalstorageService} from '../../services/localstorage.service';
 import { FormControl, FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
-import { LogindetectorService } from '../logindetector.service';
+import { LogindetectorService } from '../../services/logindetector.service';
 
 @Component({
   selector: 'app-login-page',
