@@ -5,9 +5,7 @@ import { CatalogComponent } from './pages/catalog-page/catalog-page.component';
 import { PartnershipPageComponent } from './pages/partnership-page/partnership-page.component';
 import { LoginPageComponent } from './pages/login-page/login-page.component';
 import { RegistrationPageComponent} from './pages/registration-page/registration-page.component';
-import { ProfilePageComponent} from './pages/profile-page/profile-page.component';
-import { MysubscriptionsPageComponent} from './pages/mysubscriptions-page/mysubscriptions-page.component';
-import { MywalletPageComponent} from './pages/mywallet-page/mywallet-page.component';
+import { PersonalPageComponent} from './pages/personal-page/personal-page.component';
 
 const routes: Routes = [
   { path: '', component: HomePageComponent },
@@ -15,9 +13,12 @@ const routes: Routes = [
   { path: 'partnership', component: PartnershipPageComponent },
   { path: 'signin' , component: LoginPageComponent },
   { path: 'signup' , component: RegistrationPageComponent},
-  { path: 'profile' , component: ProfilePageComponent},
-  { path: 'mysubscriptions' , component : MysubscriptionsPageComponent},
-  { path: 'mywallet', component : MywalletPageComponent}
+  { path: 'personal',
+    children: [
+      { path: 'profile', component: PersonalPageComponent },
+      { path: 'mysubscriptions', component: PersonalPageComponent },
+      { path: 'mywallet', component: PersonalPageComponent }],
+    component: PersonalPageComponent}
 ];
 
 @NgModule({

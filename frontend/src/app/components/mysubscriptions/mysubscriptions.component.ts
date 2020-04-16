@@ -2,11 +2,11 @@ import { Component, OnInit } from '@angular/core';
 import { LocalstorageService } from '../../services/localstorage.service';
 
 @Component({
-  selector: 'app-mysubscriptions-page',
-  templateUrl: './mysubscriptions-page.component.html',
-  styleUrls: ['./mysubscriptions-page.component.css']
+  selector: 'app-mysubscriptions',
+  templateUrl: './mysubscriptions.component.html',
+  styleUrls: ['./mysubscriptions.component.css']
 })
-export class MysubscriptionsPageComponent implements OnInit {
+export class MysubscriptionsComponent implements OnInit {
   user: any;
 
   constructor(private sessionstorage: LocalstorageService) { }

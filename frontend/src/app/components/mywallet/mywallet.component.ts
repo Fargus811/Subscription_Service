@@ -4,11 +4,11 @@ import { HttpClient } from '@angular/common/http';
 import { cards } from './cards';
 
 @Component({
-  selector: 'app-mywallet-page',
-  templateUrl: './mywallet-page.component.html',
-  styleUrls: ['./mywallet-page.component.css']
+  selector: 'app-mywallet',
+  templateUrl: './mywallet.component.html',
+  styleUrls: ['./mywallet.component.css']
 })
-export class MywalletPageComponent implements OnInit {
+export class MywalletComponent implements OnInit {
   user: any;
   cards: any;
 

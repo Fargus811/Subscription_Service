@@ -11,20 +11,20 @@ export class CardFormComponent implements OnInit {
   name = 'Angular';
   userFormGroup: FormGroup;
   creditCardTypes = [
-    "Visa",
+    'Visa',
 
-    "AmericanExpress",
+    'AmericanExpress',
 
-    "Maestro",
+    'Maestro',
 
-    "JCB",
+    'JCB',
 
-    "Discover",
+    'Discover',
 
-    "DinersClub",
+    'DinersClub',
 
-    "MasterCard"
-]
+    'MasterCard'
+];
   constructor(private formBuilder: FormBuilder){}
 
 
@@ -32,13 +32,13 @@ export class CardFormComponent implements OnInit {
     this.userFormGroup = this.formBuilder.group({
       cardType: [ 'Visa'],
       creditCard: ['', RxwebValidators.creditCard ({fieldName: 'cardType'})],
-      cvvCard: ['', RxwebValidators.numeric({acceptValue:NumericValueType.PositiveNumber  ,allowDecimal:false })],
-      ownerName: ['', RxwebValidators.alpha({allowWhiteSpace:true })],
+      cvvCard: ['', RxwebValidators.numeric({acceptValue: NumericValueType.PositiveNumber, allowDecimal: false })],
+      ownerName: ['', RxwebValidators.alpha({allowWhiteSpace: true })],
     });
   }
 
   nameToUpperCase(){
-    const node = document.getElementById('owner');
+    const node = document.getElementById('owner') as HTMLInputElement;
     console.log(node);
     node.value = node.value.toUpperCase();
   }

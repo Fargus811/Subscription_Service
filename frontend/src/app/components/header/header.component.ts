@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Location } from '@angular/common';
 import { Router } from '@angular/router';
-import { LocalstorageService } from '../services/localstorage.service';
-import { LogindetectorService } from '../services/logindetector.service';
+import { LocalstorageService } from '../../services/localstorage.service';
+import { LogindetectorService } from '../../services/logindetector.service';
 
 @Component({
   selector: 'app-header',
@@ -20,10 +20,10 @@ export class HeaderComponent implements OnInit {
     private loginDetector: LogindetectorService
     ) {
         this.router.events.subscribe(
-          (val) => this.changeLocation());
+          () => this.changeLocation());
 
         this.loginDetector.loginResult$.subscribe(
-          (val) => this.checkUser());
+          () => this.checkUser());
 
      }
 
@@ -32,7 +32,6 @@ export class HeaderComponent implements OnInit {
   }
 
   checkUser() {
-    console.log('I LIVE');
     const token = localStorage.getItem('token');
     const session = this.sessionstorage.getSession(token);
     if (token && session) {
