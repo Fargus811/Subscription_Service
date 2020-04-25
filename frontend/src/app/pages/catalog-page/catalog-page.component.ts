@@ -15,5 +15,11 @@ export class CatalogComponent implements OnInit {
     this.subscriptions = this.http.get('/assets/subscriptions.json');
 
   }
+  subscribeToService(buttonId: string){
+    const button = document.getElementById(buttonId);
+    button.setAttribute('style', 'color: green; border-color: green');
+    button.innerHTML = '<img src="assets/done.svg"> Subscribed';
+    window.alert('Subscribed to ' + buttonId);
+  }
 
 }
