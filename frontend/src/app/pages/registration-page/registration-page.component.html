@@ -1,5 +1,5 @@
-<div class = "row justify-content-cener" style="margin-bottom: 50px;">
-  <div class ="container">
+<div class="row justify-content-cener" style="margin-bottom: 50px;">
+  <div class="container">
     <div class="formheader">Sign Up</div>
     <div class="btn-group btn-group-toggle" data-toggle="buttons">
       <label id="option1" class="btn btn-secondary active">
@@ -13,14 +13,14 @@
     <form [formGroup]="registerForm">
       <div class="form-group">
         <label for="InputEmail">Email</label>
-        <input formControlName="email" type="email" class="form-control" id="InputEmail" aria-describedby="emailHelp" placeholder="Enter email">
+        <input formControlName="email" type="email" class="form-control" id="InputEmail" aria-describedby="emailHelp"
+          placeholder="Enter email">
         <span class="text-danger"
-        *ngIf="(registerFormControl.email.touched || submitted) && registerFormControl.email.errors?.required">
-        Email is required
-    </span>
-        <span class="text-danger"
-         *ngIf="registerFormControl.email.touched && registerFormControl.email.errors?.email">
-        Enter a valid email address
+          *ngIf="(registerFormControl.email.touched || submitted) && registerFormControl.email.errors?.required">
+          Email is required
+        </span>
+        <span class="text-danger" *ngIf="registerFormControl.email.touched && registerFormControl.email.errors?.email">
+          Enter a valid email address
         </span>
         <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
       </div>
@@ -28,33 +28,34 @@
         <label for="InputLogin">{{displayedInputName}}</label>
         <input formControlName="name" type="text" class="form-control" id="name" placeholder="name">
         <span class="text-danger"
-            *ngIf="(registerFormControl.name.touched || submitted) && registerFormControl.name.errors?.required">
-            Name is required
-             </span>
+          *ngIf="(registerFormControl.name.touched || submitted) && registerFormControl.name.errors?.required">
+          Name is required
+        </span>
       </div>
       <div class="form-group">
-      <div class="form-group">
-        <label for="InputPassword">Password</label>
-        <input formControlName="password" type="password" class="form-control" id="InputPassword" placeholder="Password">
-        <span class="text-danger"
-           *ngIf="(registerFormControl.password.touched || submitted) && registerFormControl.password.errors?.required">
-           Password is required
-           </span>
-      </div>
+        <div class="form-group">
+          <label for="InputPassword">Password</label>
+          <input formControlName="password" type="password" class="form-control" id="InputPassword"
+            placeholder="Password">
+          <span class="text-danger"
+            *ngIf="(registerFormControl.password.touched || submitted) && registerFormControl.password.errors?.required">
+            Password is required
+          </span>
+        </div>
         <label>Confirm Password</label>
         <input type="password" class="form-control" formControlName="confirmPassword" placeholder="Password">
         <span class="text-danger"
-            *ngIf="(registerFormControl.confirmPassword.touched || submitted)&& registerFormControl.confirmPassword.errors?.required">
-            Confirm Password is required
+          *ngIf="(registerFormControl.confirmPassword.touched || submitted)&& registerFormControl.confirmPassword.errors?.required">
+          Confirm Password is required
         </span>
         <span class="text-danger"
-            *ngIf="registerFormControl.confirmPassword.touched && registerFormControl.confirmPassword.errors?.passwordMismatch">
-            Passwords doesn't match
+          *ngIf="registerFormControl.confirmPassword.touched && registerFormControl.confirmPassword.errors?.passwordMismatch">
+          Passwords doesn't match
         </span>
-    </div>
-    <div class="form-group">
+      </div>
+      <div class="form-group">
         <button type="submit" class="btn btn-success" style="margin-top: 25px;">Register</button>
-    </div>
+      </div>
     </form>
   </div>
-  </div>
+</div>

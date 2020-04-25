@@ -15,7 +15,7 @@
                     <nav class="side-menu">
                         <ul class="nav">
                             <li class="{{activeProfile}}"><a routerLink="profile"><span class="fa fa-user"></span> Profile</a></li>
-                            <li class="{{activeSubscriptions}}"><a routerLink="mysubscriptions"><span class="fa fa-cog"></span> Subscriptions</a></li>
+                            <li class="{{activeSubscriptions}}"><a routerLink="{{user.role==1?'mysubscriptions':(user.role==2?'myservices':'adminpage')}}"><span class="fa fa-cog"></span> Subscriptions</a></li>
                             <li class="{{activeWallet}}"><a routerLink="mywallet"><span class="fa fa-credit-card"></span> Wallet</a></li>
                         </ul>
                     </nav>
@@ -24,8 +24,9 @@
           </section>
             <div class="content-panel">
               <app-profile *ngIf="currentPath=='/personal/profile'"></app-profile>
-              <app-mysubscriptions *ngIf="currentPath=='/personal/mysubscriptions'"></app-mysubscriptions>
+              <app-mysubscriptions *ngIf="currentPath=='/personal/mysubscriptions && user.role==1'"></app-mysubscriptions>
               <app-mywallet *ngIf="currentPath=='/personal/mywallet'"></app-mywallet>
+              <app-myservices *ngIf="currentPath== '/personal/myservices'"></app-myservices>
             </div>
       </div>
   </div>

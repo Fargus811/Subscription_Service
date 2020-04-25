@@ -17,7 +17,9 @@ const routes: Routes = [
     children: [
       { path: 'profile', component: PersonalPageComponent },
       { path: 'mysubscriptions', component: PersonalPageComponent },
-      { path: 'mywallet', component: PersonalPageComponent }],
+      { path: 'mywallet', component: PersonalPageComponent },
+      { path: 'myservices', component: PersonalPageComponent},
+      { path: 'control-panel', component: PersonalPageComponent}],
     component: PersonalPageComponent}
 ];
 

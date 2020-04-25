@@ -1,0 +1,26 @@
+<div class="row">
+  <div class="editButton" style="margin-bottom: 30px;" (click)="openModal()">Create my service </div>
+</div>
+<div class="row">
+  <div class="col" style="font-weight: 700;">Service Name</div>
+  <div class="col" style="font-weight: 700;">Subscribes</div>
+  <div class="col" style="font-weight: 700;">Cost</div>
+  <div class="col" style="font-weight: 700;">Actions</div>
+</div>
+<div *ngFor="let item of services | async" class="row">
+  <div class="col">{{item['name']}}</div>
+  <div class="col">{{item['subscribes']}}</div>
+  <div class="col">{{item['price']}}</div>
+  <div class="col">
+    <div class="editButton">Edit</div>
+    <div class="deleteButton">Delete</div>
+  </div>
+</div>
+<div class="modal" style="overflow-x: scroll">
+  <div class="modal-body">
+    <h3>Add New Service</h3>
+    <div class="modal-close" (click)="closeModal()">+</div>
+    <app-service-form></app-service-form>
+  </div>
+  <div class="modal background" (click)="closeModal()"></div>
+</div>

@@ -1,29 +1,31 @@
 <div class='header' style="z-index:2">
-  <div *ngIf="currentPath==''; else homeInactive" class='site-name' >SUBU</div>
+  <div *ngIf="currentPath==''; else homeInactive" class='site-name'>SUBU</div>
   <ng-template #homeInactive><a class='site-name' routerLink="">SUBU</a></ng-template>
-    <div *ngIf="currentPath=='/catalog'; else catalogInactive" class='button active'>Catalog</div>
-    <ng-template #catalogInactive><a class='button' routerLink="catalog">Catalog</a></ng-template>
-    <div *ngIf="currentPath=='/partnership'; else partnershipInactive" class='button active'>Partnership</div>
-    <ng-template #partnershipInactive><a class='button' routerLink="partnership">Partnership</a></ng-template>
-    <div class="listener" (sessionsModified)="checkUser()" hidden></div>
-    <div *ngIf="user; else unauthorized"  class="user-block authorized">
-      <div class="username">{{user.displayname}}</div>
-      <img src="assets/provile.png" alt="Profile-Img" style="float: right;width: 60px; margin-top: 5px;" >
-      <div class = 'userbox'>
-        <div *ngIf="currentPath=='/personal/profile'; else homeInactive" class='button active'>Profile</div>
-        <ng-template #homeInactive><a class='button' routerLink="personal/profile">Profile</a></ng-template>
-        <div *ngIf="currentPath=='/personal/mysubscriptions'; else catalogInactive" class='button active'>My subscriptions</div>
-        <ng-template #catalogInactive><a class='button' routerLink="personal/mysubscriptions">My subscriptions</a></ng-template>
-        <div *ngIf="currentPath=='/personal/mywallet'; else walletInactive" class='button active'>My wallet</div>
-        <ng-template #walletInactive><a class='button' routerLink="personal/mywallet">My wallet</a></ng-template>
-        <a class="button" routerLink="">LogOut</a>
+  <div *ngIf="currentPath=='/catalog'; else catalogInactive" class='button active'>Catalog</div>
+  <ng-template #catalogInactive><a class='button' routerLink="catalog">Catalog</a></ng-template>
+  <div *ngIf="currentPath=='/partnership'; else partnershipInactive" class='button active'>Partnership</div>
+  <ng-template #partnershipInactive><a class='button' routerLink="partnership">Partnership</a></ng-template>
+  <div class="listener" (sessionsModified)="checkUser()" hidden></div>
+  <div *ngIf="user; else unauthorized" class="user-block authorized">
+    <div class="username">{{user.displayname}}</div>
+    <img src="assets/provile.png" alt="Profile-Img" style="float: right;width: 60px; margin-top: 5px;">
+    <div class='userbox'>
+      <div *ngIf="currentPath=='/personal/profile'; else homeInactive" class='button active'>Profile</div>
+      <ng-template #homeInactive><a class='button' routerLink="personal/profile">Profile</a></ng-template>
+      <div *ngIf="currentPath=='/personal/mysubscriptions'; else catalogInactive" class='button active'>My subscriptions
       </div>
+      <ng-template #catalogInactive><a class='button' routerLink="personal/mysubscriptions">My subscriptions</a>
+      </ng-template>
+      <div *ngIf="currentPath=='/personal/mywallet'; else walletInactive" class='button active'>My wallet</div>
+      <ng-template #walletInactive><a class='button' routerLink="personal/mywallet">My wallet</a></ng-template>
+      <a class="button" routerLink="">LogOut</a>
     </div>
-    <ng-template #unauthorized>
-      <div class="user-block unauthorized">
-        <a class='button auth primary' routerLink="signup">SIGN UP</a>
-        <a class='button auth secondary' routerLink="signin">SIGN IN</a>
-      </div>
-    </ng-template>
+  </div>
+  <ng-template #unauthorized>
+    <div class="user-block unauthorized">
+      <a class='button auth primary' routerLink="signup">SIGN UP</a>
+      <a class='button auth secondary' routerLink="signin">SIGN IN</a>
+    </div>
+  </ng-template>
 </div>
 <div class="header-correction"></div>

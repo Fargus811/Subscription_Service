@@ -1,33 +1,44 @@
-                  <div class="wrapper">
-                    <div class="app-wrapper">
+<div class="wrapper">
+  <div class="app-wrapper">
+    <!--Wallet-->
+    <aside class="wallet" id="wallet-container">
+      <h2>My Wallets</h2>
+      <div class="modal-control" (click)="addNewWallet()">+</div>
+      <div *ngFor="let card of cards" class="credit-card" (click)="displayWalletTransactions(card.id)">
+        <div class="wallet-name">{{card.name}}</div>
+        <div class="wallet-balance">{{card.balance}}</div>
+        <div class="wallet-currency">{{card.currency}}</div>
+      </div>
+    </aside>
 
-                      <!--Wallet-->
-                      <aside class="wallet">
-                        <h2>My Wallets</h2>
-                        <div class="modal-control" (click)="openModal()">+</div>
-                        <div *ngFor="let card of cards" class="credit-card {{card.type}}">
-                          <div class="card-image"></div>
-                          <div class="credit-card_number">{{card.number}}</div>
-                          <div class="credit-card_expiration">Valid Thru:{{card.expiration}}</div>
-                        </div>
-                      </aside>
+    <content class="transactions-wrapper">
+      <h2>
+        Current Balance
+        <span class="total-balance">{{displayedCard.balance}}</span>
+      </h2>
+      <button class ="buttonAddBalance" (click)="addBalance()">Add funds</button>
+      <div class="transactions" id="transactions">
+        <div *ngFor="let transaction of displayedCard.transactions">
+          <div *ngIf="transaction.receiver !== null" class="transaction-item debit">
+            <div class="transaction-item_details"><h2>{{transaction.receiver}}</h2><span>{{transaction.date}}</span></div>
+            <div class="transaction-item_amount"><span>$</span><p class="amount">0{{transaction.value}}</p></div>
+          </div>
+          <div *ngIf="transaction.source !== null" class="transaction-item credit">
+            <div class="transaction-item_details"><h2>{{transaction.source}}</h2><span>{{transaction.date}}</span></div>
+            <div class="transaction-item_amount"><span>$</span><p class="amount">0{{transaction.value}}</p></div>
+          </div>
+        </div>
+      </div>
+    </content>
 
-                      <content class="transactions-wrapper">
-                        <h2>
-                          Current Balance
-                          <span class="total-balance"></span>
-                        </h2>
-                        <div class="transactions"></div>
-                      </content>
+  </div>
 
-                    </div>
-
-                  </div>
-                  <div class="modal">
-                    <div class="modal-body">
-                      <h3>Add New Card</h3>
-                      <div class="modal-close" (click)="closeModal()">+</div>
-                      <app-card-form></app-card-form>
-                    </div>
-                    <div class="modal background" (click)="closeModal()"></div>
-                  </div>
+</div>
+<div class="modal">
+  <div class="modal-body">
+    <h3>Add New Card</h3>
+    <div class="modal-close" (click)="closeModal()">+</div>
+    <app-card-form></app-card-form>
+  </div>
+  <div class="modal background" (click)="closeModal()"></div>
+</div>

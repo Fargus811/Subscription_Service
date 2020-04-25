@@ -2,6 +2,7 @@
   {
     "name": "Netflix",
     "price": 26,
+    "subscribes": 2,
     "description": [
       "Access to more than 150 TV-series",
       "Educational materials",
@@ -12,6 +13,7 @@
   {
     "name": "Kinopoisk",
     "price": 14,
+    "subscribes": 5,
     "description": [
       "7 thousand films, series, cartoons",
       "Lorem ipsum dolor sit amet",
@@ -22,6 +24,7 @@
   {
     "name": "Voka",
     "price": 32,
+    "subscribes": 20,
     "description": [
       "Pulvinar mattis nunc sed blandit",
       "Nulla pharetra diam sit amet",
@@ -32,6 +35,7 @@
   {
     "name": "Okko",
     "price": 21,
+    "subscribes": 21,
     "description": [
       "Malesuada pellentesque elit",
       "Amet risus nullam eget",

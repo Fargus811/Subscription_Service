@@ -677,7 +677,7 @@ h3 {
 }
 
 .transactions {
-    margin-top: 60px;
+    margin-top: 30px;
     border-top: 1px solid #e5e5e5;
     padding-top: 50px;
     height: 550px;
@@ -789,6 +789,32 @@ h3 {
         cursor: pointer;
         transition: .1s ease-in-out;
 }
+
+.buttonAddBalance {
+	box-shadow:inset 0px 1px 0px 0px #85a9f2;
+	background:linear-gradient(to bottom, #2462de 5%, #0d16bd 100%);
+	background-color:#2462de;
+	border-radius:6px;
+	border:1px solid #113dbf;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:15px;
+	font-weight:bold;
+	padding:6px 24px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #4016b3;
+}
+.buttonAddBalance:hover {
+	background:linear-gradient(to bottom, #0d16bd 5%, #2462de 100%);
+	background-color:#0d16bd;
+}
+.buttonAddBalance:active {
+	position:relative;
+	top:1px;
+}
+
 .credit-card:hover {
     transform: scale(1.07);
 }
@@ -940,6 +966,16 @@ h3 {
     margin-right: 25px;
         margin-bottom: 25px;
     text-align: left;
+    }
+    .form-background {
+        width: calc(50% - 25px);
+    max-width: 260px;
+    display: inline-block;
+    margin-right: 25px;
+        margin-bottom: 25px;
+    text-align: left;
+    opacity: 0;
+    height: 94px;
     }
     .credit-card:nth-of-type(2) {
         margin-right: 0px;

@@ -19,6 +19,9 @@ import { MywalletComponent } from './components/mywallet/mywallet.component';
 import { CardFormComponent } from './components/card-form/card-form.component';
 import { PersonalPageComponent } from './pages/personal-page/personal-page.component';
 import { ProfileFormComponent } from './components/profile-form/profile-form.component';
+import { MyservicesComponent } from './components/myservices/myservices.component';
+import { ServiceFormComponent } from './components/service-form/service-form.component';
+import { ControlPanelComponent } from './components/control-panel/control-panel.component';
 
 @NgModule({
   declarations: [
@@ -36,6 +39,9 @@ import { ProfileFormComponent } from './components/profile-form/profile-form.com
     CardFormComponent,
     ProfileFormComponent,
     PersonalPageComponent,
+    MyservicesComponent,
+    ControlPanelComponent,
+    ServiceFormComponent,
   ],
   imports: [
     BrowserModule,

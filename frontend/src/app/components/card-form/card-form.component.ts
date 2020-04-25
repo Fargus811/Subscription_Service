@@ -39,7 +39,6 @@ export class CardFormComponent implements OnInit {
 
   nameToUpperCase(){
     const node = document.getElementById('owner') as HTMLInputElement;
-    console.log(node);
     node.value = node.value.toUpperCase();
   }
 }
