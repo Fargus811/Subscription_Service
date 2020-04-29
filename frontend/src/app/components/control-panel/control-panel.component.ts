@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { users } from '../../../assets/users';
 
 @Component({
   selector: 'app-control-panel',
@@ -6,10 +7,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./control-panel.component.css']
 })
 export class ControlPanelComponent implements OnInit {
-
-  constructor() { }
-
-  ngOnInit(): void {
+  users: any;
+  constructor(
+  ) {
   }
 
+  ngOnInit(): void {
+    this.users = [];
+    for (let key in users) {
+     this.users.push(users[key]);
+    }
+  }
 }

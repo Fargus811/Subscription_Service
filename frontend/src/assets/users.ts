@@ -7,9 +7,21 @@ enum role {
 
 export const users = {
   'ggas@gmail.com': {
-    displayname: 'Daniil S.',
-    password: '123',
     email: 'ggas@gmail.com',
-    role: role.USER
+    password: '40ofariv',
+    role: role.USER,
+    displayname: 'Daniil S.'
+  },
+  'netflix@gmail.com': {
+    email: 'netflix@gmail.com',
+    password: 'netflix',
+    role: role.COMPANY,
+    displayname: 'NETFLIX'
+  },
+  'admin@gmail.com': {
+    email: 'admin@gmail.com',
+    password: 'admin',
+    role: role.ADMIN,
+    displayname: 'Admin'
   }
 };

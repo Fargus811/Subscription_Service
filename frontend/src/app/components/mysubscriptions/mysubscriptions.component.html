@@ -9,7 +9,6 @@
                           <tr>
                             <th>Service Name</th>
                             <th>Price</th>
-                            <th>Assigned wallet</th>
                             <th>Start Date</th>
                             <th>End Date</th>
                             <th>Actions</th>
@@ -23,7 +22,6 @@
                           <tr *ngFor="let item of subscriptions | async">
                             <td>{{item.name}}</td>
                             <td>{{item.price}}</td>
-                            <td>Wallet #1</td>
                             <td>10 Apr 1997</td>
                             <td>?</td>
                             <td><button class="deleteButton">Unsubscribe</button></td>
