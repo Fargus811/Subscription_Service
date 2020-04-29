@@ -1,33 +1,34 @@
-.createbutton{
-position: relative;
-width: 200px;
-height: fit-content;
-margin-bottom: 30px;
+.createbutton {
+  position: relative;
+  width: 200px;
+  height: fit-content;
+  margin-bottom: 30px;
 
-font-family: Roboto;
-font-style: normal;
-font-weight: 300;
-font-size: 18px;
-line-height: 29px;
-/* identical to box height, or 88% */
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 29px;
+  /* identical to box height, or 88% */
 
-text-align: center;
+  text-align: center;
 
-color: #f8f7f7; }
+  color: #f8f7f7;
+}
 
 
-.col{
+.col {
   border-style: solid;
   border-width: 0.5px;
   border-color: blue;
   text-align: center;
   padding: 15px;
 
-font-family: Roboto;
-font-style: normal;
-font-weight: 200;
-font-size: 18px;
-line-height: 29px;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 200;
+  font-size: 18px;
+  line-height: 29px;
 
 }
 
@@ -38,15 +39,15 @@ line-height: 29px;
   transition: .2s;
 }
 
-.modal.background{
-display:block;
-position: fixed;
-width: 100vw;
-height: 100vh;
-background-color: rgba(0,0,0,0.7);
-z-index: 1;
-top: 0;
-left: 0;
+.modal.background {
+  display: block;
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 1;
+  top: 0;
+  left: 0;
 }
 
 .modal.open {
@@ -89,69 +90,76 @@ left: 0;
   right: 10px;
   transform: rotate(45deg);
 }
+
 .deleteButton {
-	box-shadow:inset 0px 1px 0px 0px #f5978e;
-	background:linear-gradient(to bottom, #f24537 5%, #c62d1f 100%);
-	background-color:#f24537;
-	border-radius:6px;
-	border:1px solid #d02718;
-	display:inline-block;
-	cursor:pointer;
-	color:#ffffff;
-	font-family:Arial;
-	font-size:15px;
-	font-weight:bold;
-	padding:6px 24px;
-	text-decoration:none;
-	text-shadow:0px 1px 0px #810e05;
+  box-shadow: inset 0px 1px 0px 0px #f5978e;
+  background: linear-gradient(to bottom, #f24537 5%, #c62d1f 100%);
+  background-color: #f24537;
+  border-radius: 6px;
+  border: 1px solid #d02718;
+  display: inline-block;
+  cursor: pointer;
+  color: #ffffff;
+  font-family: Arial;
+  font-size: 15px;
+  font-weight: bold;
+  padding: 6px 24px;
+  text-decoration: none;
+  text-shadow: 0px 1px 0px #810e05;
 }
+
 .deleteButton:hover {
-	background:linear-gradient(to bottom, #c62d1f 5%, #f24537 100%);
-	background-color:#c62d1f;
+  background: linear-gradient(to bottom, #c62d1f 5%, #f24537 100%);
+  background-color: #c62d1f;
 }
+
 .deleteButton:active {
-	position:relative;
-	top:1px;
+  position: relative;
+  top: 1px;
 }
+
 .editButton {
-	box-shadow:inset 0px 1px 0px 0px #af8ef5;
-	background:linear-gradient(to bottom, #3847f0 5%, #4020c4 100%);
-	background-color:#3847f0;
-	border-radius:6px;
-	border:1px solid #1980cf;
-	display:inline-block;
-	cursor:pointer;
-	color:#ffffff;
-	font-family:Arial;
-	font-size:15px;
-	font-weight:bold;
-	padding:6px 24px;
-	text-decoration:none;
-	text-shadow:0px 1px 0px #810e05;
+  box-shadow: inset 0px 1px 0px 0px #af8ef5;
+  background: linear-gradient(to bottom, #3847f0 5%, #4020c4 100%);
+  background-color: #3847f0;
+  border-radius: 6px;
+  border: 1px solid #1980cf;
+  display: inline-block;
+  cursor: pointer;
+  color: #ffffff;
+  font-family: Arial;
+  font-size: 15px;
+  font-weight: bold;
+  padding: 6px 24px;
+  text-decoration: none;
+  text-shadow: 0px 1px 0px #810e05;
 }
+
 .editButton:hover {
-	background:linear-gradient(to bottom, #4020c4 5%, #3847f0 100%);
-	background-color:#4020c4;
+  background: linear-gradient(to bottom, #4020c4 5%, #3847f0 100%);
+  background-color: #4020c4;
 }
+
 .editButton:active {
-	position:relative;
-	top:1px;
+  position: relative;
+  top: 1px;
 }
+
 .modal {
   display: none;
   text-align: center;
   transition: .2s;
 }
 
-.modal.background{
-display:block;
-position: fixed;
-width: 100vw;
-height: 100vh;
-background-color: rgba(0,0,0,0.7);
-z-index: 1;
-top: 0;
-left: 0;
+.modal.background {
+  display: block;
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 1;
+  top: 0;
+  left: 0;
 }
 
 .modal.open {

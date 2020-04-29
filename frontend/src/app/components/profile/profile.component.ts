@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import { LocalstorageService } from '../../services/localstorage.service';
+import {Component, OnInit} from '@angular/core';
+import {LocalstorageService} from '../../services/localstorage.service';
 
 @Component({
   selector: 'app-profile',
@@ -9,7 +9,8 @@ import { LocalstorageService } from '../../services/localstorage.service';
 export class ProfileComponent implements OnInit {
   user: any;
 
-  constructor(private sessionstorage: LocalstorageService) { }
+  constructor(private sessionstorage: LocalstorageService) {
+  }
 
   ngOnInit(): void {
     const token = localStorage.getItem('token');

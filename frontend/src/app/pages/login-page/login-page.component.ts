@@ -1,8 +1,8 @@
-import { Component, OnInit, Output, EventEmitter } from '@angular/core';
-import { LocalstorageService} from '../../services/localstorage.service';
-import { FormControl, FormGroup, FormBuilder, Validators } from '@angular/forms';
-import { Router } from '@angular/router';
-import { LogindetectorService } from '../../services/logindetector.service';
+import {Component, OnInit} from '@angular/core';
+import {LocalstorageService} from '../../services/localstorage.service';
+import {FormBuilder, FormControl, FormGroup, Validators} from '@angular/forms';
+import {Router} from '@angular/router';
+import {LogindetectorService} from '../../services/logindetector.service';
 
 @Component({
   selector: 'app-login-page',
@@ -19,19 +19,19 @@ export class LoginPageComponent implements OnInit {
     private formBuilder: FormBuilder,
     private router: Router,
     private loginDetector: LogindetectorService
-    ) {
-      this.email = new FormControl('', [Validators.required]);
-      this.password = new FormControl('', [Validators.required]);
-      this.loginForm = this.formBuilder.group({
-        email: this.email,
-        password: this.password
-      });
-    }
+  ) {
+    this.email = new FormControl('', [Validators.required]);
+    this.password = new FormControl('', [Validators.required]);
+    this.loginForm = this.formBuilder.group({
+      email: this.email,
+      password: this.password
+    });
+  }
 
   ngOnInit(): void {
   }
 
-  authenticate(formData){
+  authenticate(formData) {
     const auth = this.sessionstorage.authenticate(formData.email, formData.password);
     console.log(formData);
     console.log(formData.email);
@@ -40,8 +40,7 @@ export class LoginPageComponent implements OnInit {
       localStorage.setItem('token', auth);
       this.loginDetector.announceLogin(formData.email);
       this.router.navigateByUrl('profile');
-    }
-    else {
+    } else {
       window.alert('Incorrect login or password!');
     }
   }

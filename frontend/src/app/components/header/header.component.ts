@@ -1,8 +1,8 @@
-import { Component, OnInit } from '@angular/core';
-import { Location } from '@angular/common';
-import { Router } from '@angular/router';
-import { LocalstorageService } from '../../services/localstorage.service';
-import { LogindetectorService } from '../../services/logindetector.service';
+import {Component, OnInit} from '@angular/core';
+import {Location} from '@angular/common';
+import {Router} from '@angular/router';
+import {LocalstorageService} from '../../services/localstorage.service';
+import {LogindetectorService} from '../../services/logindetector.service';
 
 @Component({
   selector: 'app-header',
@@ -18,14 +18,14 @@ export class HeaderComponent implements OnInit {
     private router: Router,
     private sessionstorage: LocalstorageService,
     private loginDetector: LogindetectorService
-    ) {
-        this.router.events.subscribe(
-          () => this.changeLocation());
+  ) {
+    this.router.events.subscribe(
+      () => this.changeLocation());
 
-        this.loginDetector.loginResult$.subscribe(
-          () => this.checkUser());
+    this.loginDetector.loginResult$.subscribe(
+      () => this.checkUser());
 
-     }
+  }
 
   changeLocation() {
     this.currentPath = this.location.path();
@@ -37,8 +37,7 @@ export class HeaderComponent implements OnInit {
     if (token && session) {
       this.user = session;
       console.log(this.user);
-    }
-    else {
+    } else {
       this.user = false;
     }
   }

@@ -1,7 +1,7 @@
-import { Component, OnInit } from '@angular/core';
-import { LocalstorageService } from '../../services/localstorage.service';
-import { HttpClient } from '@angular/common/http';
-import { cards } from './cards';
+import {Component, OnInit} from '@angular/core';
+import {LocalstorageService} from '../../services/localstorage.service';
+import {HttpClient} from '@angular/common/http';
+import {cards} from './cards';
 
 @Component({
   selector: 'app-mywallet',
@@ -16,7 +16,8 @@ export class MywalletComponent implements OnInit {
   constructor(
     private sessionstorage: LocalstorageService,
     private http: HttpClient
-    ) { }
+  ) {
+  }
 
   ngOnInit(): void {
     const token = localStorage.getItem('token');
@@ -24,13 +25,16 @@ export class MywalletComponent implements OnInit {
     this.cards = cards;
     this.displayWalletTransactions(1);
   }
-  openModal(){
+
+  openModal() {
     document.querySelector('.modal').classList.add('open');
   }
-  closeModal(){
+
+  closeModal() {
     document.querySelector('.modal').classList.remove('open');
   }
-  addNewWallet(){
+
+  addNewWallet() {
     if (window.localStorage.getItem('newWalletInProgress') !== 'true') {
       window.localStorage.setItem('newWalletInProgress', 'true');
       const walletContainer = document.getElementById('wallet-container');
@@ -75,7 +79,8 @@ export class MywalletComponent implements OnInit {
       walletName.select();
     }
   }
-  createWallet(){
+
+  createWallet() {
     const formDiv = document.getElementById('wallet-entry-form');
     const walletName = formDiv.children.namedItem('wallet-name') as HTMLInputElement;
     console.log(walletName.value);
@@ -93,6 +98,7 @@ export class MywalletComponent implements OnInit {
     formDiv.className = 'credit-card';
     window.localStorage.removeItem('newWalletInProgress');
   }
+
   displayWalletTransactions(walletId: number) {
     for (let card of cards) {
       if (card.id === walletId) {
@@ -100,7 +106,8 @@ export class MywalletComponent implements OnInit {
       }
     }
   }
-  addBalance(){
+
+  addBalance() {
     window.alert('Add balance worked');
   }
 }

@@ -1,6 +1,6 @@
-import { Component, OnInit } from '@angular/core';
-import { LocalstorageService } from '../../services/localstorage.service';
-import { HttpClient } from '@angular/common/http';
+import {Component, OnInit} from '@angular/core';
+import {LocalstorageService} from '../../services/localstorage.service';
+import {HttpClient} from '@angular/common/http';
 
 @Component({
   selector: 'app-myservices',
@@ -14,7 +14,8 @@ export class MyservicesComponent implements OnInit {
   constructor(
     private sessionstorage: LocalstorageService,
     private http: HttpClient
-    ) { }
+  ) {
+  }
 
   ngOnInit(): void {
     const token = localStorage.getItem('token');
@@ -23,10 +24,12 @@ export class MyservicesComponent implements OnInit {
     console.log(this.services);
 
   }
-  openModal(){
+
+  openModal() {
     document.querySelector('.modal').classList.add('open');
   }
-  closeModal(){
+
+  closeModal() {
     document.querySelector('.modal').classList.remove('open');
   }
 

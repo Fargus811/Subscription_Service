@@ -14,9 +14,9 @@
       <div class="form-group">
         <label for="InputEmail">Email</label>
         <input formControlName="email" type="email" class="form-control" id="InputEmail" aria-describedby="emailHelp"
-          placeholder="Enter email">
+               placeholder="Enter email">
         <span class="text-danger"
-          *ngIf="(registerFormControl.email.touched || submitted) && registerFormControl.email.errors?.required">
+              *ngIf="(registerFormControl.email.touched || submitted) && registerFormControl.email.errors?.required">
           Email is required
         </span>
         <span class="text-danger" *ngIf="registerFormControl.email.touched && registerFormControl.email.errors?.email">
@@ -28,7 +28,7 @@
         <label for="InputLogin">{{displayedInputName}}</label>
         <input formControlName="name" type="text" class="form-control" id="name" placeholder="name">
         <span class="text-danger"
-          *ngIf="(registerFormControl.name.touched || submitted) && registerFormControl.name.errors?.required">
+              *ngIf="(registerFormControl.name.touched || submitted) && registerFormControl.name.errors?.required">
           Name is required
         </span>
       </div>
@@ -36,20 +36,20 @@
         <div class="form-group">
           <label for="InputPassword">Password</label>
           <input formControlName="password" type="password" class="form-control" id="InputPassword"
-            placeholder="Password">
+                 placeholder="Password">
           <span class="text-danger"
-            *ngIf="(registerFormControl.password.touched || submitted) && registerFormControl.password.errors?.required">
+                *ngIf="(registerFormControl.password.touched || submitted) && registerFormControl.password.errors?.required">
             Password is required
           </span>
         </div>
         <label>Confirm Password</label>
         <input type="password" class="form-control" formControlName="confirmPassword" placeholder="Password">
         <span class="text-danger"
-          *ngIf="(registerFormControl.confirmPassword.touched || submitted)&& registerFormControl.confirmPassword.errors?.required">
+              *ngIf="(registerFormControl.confirmPassword.touched || submitted)&& registerFormControl.confirmPassword.errors?.required">
           Confirm Password is required
         </span>
         <span class="text-danger"
-          *ngIf="registerFormControl.confirmPassword.touched && registerFormControl.confirmPassword.errors?.passwordMismatch">
+              *ngIf="registerFormControl.confirmPassword.touched && registerFormControl.confirmPassword.errors?.passwordMismatch">
           Passwords doesn't match
         </span>
       </div>

@@ -1,26 +1,28 @@
-import { Injectable } from '@angular/core';
-import { users } from '../../assets/users';
-import { sessions } from '../../assets/sessions';
+import {Injectable} from '@angular/core';
+import {users} from '../../assets/users';
+import {sessions} from '../../assets/sessions';
 
 @Injectable({
   providedIn: 'root'
 })
 export class LocalstorageService {
   private sessions = sessions;
+
   constructor() {
     console.log('initialized service');
-   }
+  }
 
-  generateToken(){
+  generateToken() {
     return Math.random().toString(36).substring(2, 15) + Math.random().toString(36).substring(2, 15);
   }
 
-  verifyPassword(email: string, password: string){
+  verifyPassword(email: string, password: string) {
     const passwordKey = 'password';
     if (email in users && users[email][passwordKey] === password) {
       return true;
+    } else {
+      return false;
     }
-    else { return false; }
   }
 
   authenticate(email: string, password: string) {
@@ -30,8 +32,7 @@ export class LocalstorageService {
       console.log('authenticated');
       console.log(this.sessions);
       return token;
-    }
-    else {
+    } else {
       return false;
     }
   }
@@ -43,9 +44,8 @@ export class LocalstorageService {
     if (this.sessions.has(token)) {
       console.log('yep');
       const user = this.sessions.get(token);
-      return { displayname: user.displayname, role: user.role };
-    }
-    else {
+      return {displayname: user.displayname, role: user.role};
+    } else {
       console.log('nope');
       return false;
     }

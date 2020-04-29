@@ -1,6 +1,5 @@
-import { Injectable } from '@angular/core';
-import { ValidatorFn, AbstractControl } from '@angular/forms';
-import { FormGroup } from '@angular/forms';
+import {Injectable} from '@angular/core';
+import {AbstractControl, FormGroup, ValidatorFn} from '@angular/forms';
 
 @Injectable({
   providedIn: 'root'
@@ -14,7 +13,7 @@ export class ValidationService {
       }
       const regex = new RegExp('^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9]).{8,}$');
       const valid = regex.test(control.value);
-      return valid ? null : { invalidPassword: true };
+      return valid ? null : {invalidPassword: true};
     };
   }
 
@@ -32,7 +31,7 @@ export class ValidationService {
       }
 
       if (passwordControl.value !== confirmPasswordControl.value) {
-        confirmPasswordControl.setErrors({ passwordMismatch: true });
+        confirmPasswordControl.setErrors({passwordMismatch: true});
       } else {
         confirmPasswordControl.setErrors(null);
       }
@@ -43,7 +42,7 @@ export class ValidationService {
     return new Promise(resolve => {
       setTimeout(() => {
         if (this.validateUserName(userControl.value)) {
-          resolve({ userNameNotAvailable: true });
+          resolve({userNameNotAvailable: true});
         } else {
           resolve(null);
         }

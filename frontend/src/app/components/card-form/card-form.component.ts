@@ -1,6 +1,6 @@
-import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup } from '@angular/forms' ;
-import { RxwebValidators, NumericValueType } from '@rxweb/reactive-form-validators';
+import {Component, OnInit} from '@angular/core';
+import {FormBuilder, FormGroup} from '@angular/forms';
+import {NumericValueType, RxwebValidators} from '@rxweb/reactive-form-validators';
 
 @Component({
   selector: 'app-card-form',
@@ -24,20 +24,22 @@ export class CardFormComponent implements OnInit {
     'DinersClub',
 
     'MasterCard'
-];
-  constructor(private formBuilder: FormBuilder){}
+  ];
+
+  constructor(private formBuilder: FormBuilder) {
+  }
 
 
-  ngOnInit(){
+  ngOnInit() {
     this.userFormGroup = this.formBuilder.group({
-      cardType: [ 'Visa'],
-      creditCard: ['', RxwebValidators.creditCard ({fieldName: 'cardType'})],
-      cvvCard: ['', RxwebValidators.numeric({acceptValue: NumericValueType.PositiveNumber, allowDecimal: false })],
-      ownerName: ['', RxwebValidators.alpha({allowWhiteSpace: true })],
+      cardType: ['Visa'],
+      creditCard: ['', RxwebValidators.creditCard({fieldName: 'cardType'})],
+      cvvCard: ['', RxwebValidators.numeric({acceptValue: NumericValueType.PositiveNumber, allowDecimal: false})],
+      ownerName: ['', RxwebValidators.alpha({allowWhiteSpace: true})],
     });
   }
 
-  nameToUpperCase(){
+  nameToUpperCase() {
     const node = document.getElementById('owner') as HTMLInputElement;
     node.value = node.value.toUpperCase();
   }

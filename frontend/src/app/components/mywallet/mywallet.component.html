@@ -16,16 +16,19 @@
         Current Balance
         <span class="total-balance">{{displayedCard.balance}}</span>
       </h2>
-      <button class ="buttonAddBalance" (click)="addBalance()">Add funds</button>
+      <button class="buttonAddBalance" (click)="addBalance()">Add funds</button>
       <div class="transactions" id="transactions">
         <div *ngFor="let transaction of displayedCard.transactions">
           <div *ngIf="transaction.receiver !== null" class="transaction-item debit">
-            <div class="transaction-item_details"><h2>{{transaction.receiver}}</h2><span>{{transaction.date}}</span></div>
-            <div class="transaction-item_amount"><span>$</span><p class="amount">0{{transaction.value}}</p></div>
+            <div class="transaction-item_details"><h2>{{transaction.receiver}}</h2><span>{{transaction.date}}</span>
+            </div>
+            <div class="transaction-item_amount"><span>$</span>
+              <p class="amount">0{{transaction.value}}</p></div>
           </div>
           <div *ngIf="transaction.source !== null" class="transaction-item credit">
             <div class="transaction-item_details"><h2>{{transaction.source}}</h2><span>{{transaction.date}}</span></div>
-            <div class="transaction-item_amount"><span>$</span><p class="amount">0{{transaction.value}}</p></div>
+            <div class="transaction-item_amount"><span>$</span>
+              <p class="amount">0{{transaction.value}}</p></div>
           </div>
         </div>
       </div>

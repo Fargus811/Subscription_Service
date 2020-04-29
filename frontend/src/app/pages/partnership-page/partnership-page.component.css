@@ -1,9 +1,10 @@
-.partnerbackground{
+.partnerbackground {
   height: 500px;
-  width:100%;
+  width: 100%;
   overflow: hidden;
 }
-.strings{
+
+.strings {
   position: relative;
   font-family: Roboto;
   font-size: medium;
@@ -12,5 +13,5 @@
   top: -800px;
   padding-left: 40px;
   padding-right: 40px;
-  color:white ;
+  color: white;
 }

@@ -1,14 +1,14 @@
 .footer {
   position: relative;
-    width: 100%;
-    height: 70px;
-    left: 0px;
-    background-color: black;
-    bottom: 0px
+  width: 100%;
+  height: 70px;
+  left: 0px;
+  background-color: black;
+  bottom: 0px
 }
 
 .container {
-  margin-left:unset;
+  margin-left: unset;
 }
 
 .footer-name {
@@ -54,6 +54,7 @@
   opacity: 0.8;
 
 }
-.block-list-element{
+
+.block-list-element {
   margin-bottom: 2px;
 }

@@ -1,11 +1,13 @@
 
-body{
-  background:#f9f9fb;
+body {
+  background: #f9f9fb;
 }
-.view-account{
-  background:#FFFFFF;
-  margin-top:20px;
+
+.view-account {
+  background: #FFFFFF;
+  margin-top: 20px;
 }
+
 .view-account .pro-label {
   font-size: 13px;
   padding: 4px 5px;
@@ -61,7 +63,7 @@ body{
   margin: 0 auto
 }
 
-.view-account .side-bar .side-menu .nav>li {
+.view-account .side-bar .side-menu .nav > li {
   font-size: 14px;
   margin-bottom: 0;
   border-bottom: none;
@@ -70,45 +72,45 @@ body{
   margin-bottom: 15px
 }
 
-.view-account .side-bar .side-menu .nav>li:last-child {
+.view-account .side-bar .side-menu .nav > li:last-child {
   margin-right: 0
 }
 
-.view-account .side-bar .side-menu .nav>li>a {
+.view-account .side-bar .side-menu .nav > li > a {
   display: inline-block;
   color: #9499a3;
   padding: 5px;
   border-bottom: 2px solid transparent
 }
 
-.view-account .side-bar .side-menu .nav>li>a:hover {
+.view-account .side-bar .side-menu .nav > li > a:hover {
   color: #616670;
   background: none
 }
 
-.view-account .side-bar .side-menu .nav>li.active a {
+.view-account .side-bar .side-menu .nav > li.active a {
   color: #40babd;
   border-bottom: 2px solid #40babd;
   background: none;
   border-right: none
 }
 
-.theme-2 .view-account .side-bar .side-menu .nav>li.active a {
+.theme-2 .view-account .side-bar .side-menu .nav > li.active a {
   color: #6dbd63;
   border-bottom-color: #6dbd63
 }
 
-.theme-3 .view-account .side-bar .side-menu .nav>li.active a {
+.theme-3 .view-account .side-bar .side-menu .nav > li.active a {
   color: #497cb1;
   border-bottom-color: #497cb1
 }
 
-.theme-4 .view-account .side-bar .side-menu .nav>li.active a {
+.theme-4 .view-account .side-bar .side-menu .nav > li.active a {
   color: #ec6952;
   border-bottom-color: #ec6952
 }
 
-.view-account .side-bar .side-menu .nav>li .icon {
+.view-account .side-bar .side-menu .nav > li .icon {
   display: block;
   font-size: 24px;
   margin-bottom: 5px
@@ -187,7 +189,7 @@ body{
   overflow: hidden
 }
 
-.view-account .content-panel .mails-wrapper .mail-item>div {
+.view-account .content-panel .mails-wrapper .mail-item > div {
   float: left
 }
 
@@ -436,150 +438,180 @@ body{
   color: #a2a6af
 }
 
-@media (max-width:767px) {
+@media (max-width: 767px) {
   .view-account .content-panel .title {
-      text-align: center
+    text-align: center
   }
+
   .view-account .side-bar .user-info {
-      padding: 0
+    padding: 0
   }
+
   .view-account .side-bar .user-info .img-profile {
-      width: 60px;
-      height: 60px
+    width: 60px;
+    height: 60px
   }
+
   .view-account .side-bar .user-info .meta li {
-      margin-bottom: 5px
+    margin-bottom: 5px
   }
+
   .view-account .content-panel .content-header-wrapper .actions {
-      position: static;
-      margin-bottom: 30px
+    position: static;
+    margin-bottom: 30px
   }
+
   .view-account .content-panel {
-      padding: 0
+    padding: 0
   }
+
   .view-account .content-panel .content-utilities .page-nav {
-      position: static;
-      margin-bottom: 15px
+    position: static;
+    margin-bottom: 15px
   }
+
   .drive-wrapper .drive-item {
-      width: 100px;
-      margin-right: 5px;
-      float: none
+    width: 100px;
+    margin-right: 5px;
+    float: none
   }
+
   .drive-wrapper .drive-item-thumb {
-      width: auto;
-      height: 54px
+    width: auto;
+    height: 54px
   }
+
   .drive-wrapper .drive-item-thumb .fa {
-      font-size: 24px;
-      padding-top: 0
+    font-size: 24px;
+    padding-top: 0
   }
+
   .view-account .content-panel .avatar .figure img {
-      float: none;
-      margin-bottom: 15px
+    float: none;
+    margin-bottom: 15px
   }
+
   .view-account .file-uploader {
-      margin-bottom: 15px
+    margin-bottom: 15px
   }
+
   .view-account .mail-subject {
-      max-width: 100px;
-      white-space: nowrap;
-      overflow: hidden;
-      text-overflow: ellipsis
+    max-width: 100px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis
   }
+
   .view-account .content-panel .mails-wrapper .mail-item .time-container {
-      position: static
+    position: static
   }
+
   .view-account .content-panel .mails-wrapper .mail-item .time-container .time {
-      width: auto;
-      text-align: left
+    width: auto;
+    text-align: left
   }
 }
 
-@media (min-width:768px) {
+@media (min-width: 768px) {
   .view-account .side-bar .user-info {
-      padding: 0;
-      padding-bottom: 15px
+    padding: 0;
+    padding-bottom: 15px
   }
+
   .view-account .mail-subject .subject {
-      max-width: 200px;
-      white-space: nowrap;
-      overflow: hidden;
-      text-overflow: ellipsis
+    max-width: 200px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis
   }
 }
 
-@media (min-width:992px) {
+@media (min-width: 992px) {
   .view-account .content-panel {
-      min-height: 800px;
-      border-left: 1px solid #f3f3f7;
-      margin-left: 200px
+    min-height: 800px;
+    border-left: 1px solid #f3f3f7;
+    margin-left: 200px
   }
+
   .view-account .mail-subject .subject {
-      max-width: 280px;
-      white-space: nowrap;
-      overflow: hidden;
-      text-overflow: ellipsis
+    max-width: 280px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis
   }
+
   .view-account .side-bar {
-      position: absolute;
-      width: 200px;
-      min-height: 600px
+    position: absolute;
+    width: 200px;
+    min-height: 600px
   }
+
   .view-account .side-bar .user-info {
-      margin-bottom: 0;
-      border-bottom: none;
-      padding: 30px
+    margin-bottom: 0;
+    border-bottom: none;
+    padding: 30px
   }
+
   .view-account .side-bar .user-info .img-profile {
-      width: 120px;
-      height: 120px
+    width: 120px;
+    height: 120px
   }
+
   .view-account .side-bar .side-menu {
-      text-align: left
+    text-align: left
   }
+
   .view-account .side-bar .side-menu .nav {
-      display: block
+    display: block
   }
-  .view-account .side-bar .side-menu .nav>li {
-      display: block;
-      float: none;
-      font-size: 14px;
-      border-bottom: 1px solid #f3f3f7;
-      margin-right: 0;
-      margin-bottom: 0
+
+  .view-account .side-bar .side-menu .nav > li {
+    display: block;
+    float: none;
+    font-size: 14px;
+    border-bottom: 1px solid #f3f3f7;
+    margin-right: 0;
+    margin-bottom: 0
   }
-  .view-account .side-bar .side-menu .nav>li>a {
-      display: block;
-      color: #9499a3;
-      padding: 10px 15px;
-      padding-left: 30px
+
+  .view-account .side-bar .side-menu .nav > li > a {
+    display: block;
+    color: #9499a3;
+    padding: 10px 15px;
+    padding-left: 30px
   }
-  .view-account .side-bar .side-menu .nav>li>a:hover {
-      background: #f9f9fb
+
+  .view-account .side-bar .side-menu .nav > li > a:hover {
+    background: #f9f9fb
   }
-  .view-account .side-bar .side-menu .nav>li.active a {
-      background: #f9f9fb;
-      border-right: 4px solid #40babd;
-      border-bottom: none
+
+  .view-account .side-bar .side-menu .nav > li.active a {
+    background: #f9f9fb;
+    border-right: 4px solid #40babd;
+    border-bottom: none
   }
-  .theme-2 .view-account .side-bar .side-menu .nav>li.active a {
-      border-right-color: #6dbd63
+
+  .theme-2 .view-account .side-bar .side-menu .nav > li.active a {
+    border-right-color: #6dbd63
   }
-  .theme-3 .view-account .side-bar .side-menu .nav>li.active a {
-      border-right-color: #497cb1
+
+  .theme-3 .view-account .side-bar .side-menu .nav > li.active a {
+    border-right-color: #497cb1
   }
-  .theme-4 .view-account .side-bar .side-menu .nav>li.active a {
-      border-right-color: #ec6952
+
+  .theme-4 .view-account .side-bar .side-menu .nav > li.active a {
+    border-right-color: #ec6952
   }
-  .view-account .side-bar .side-menu .nav>li .icon {
-      font-size: 24px;
-      vertical-align: middle;
-      text-align: center;
-      width: 40px;
-      display: inline-block
+
+  .view-account .side-bar .side-menu .nav > li .icon {
+    font-size: 24px;
+    vertical-align: middle;
+    text-align: center;
+    width: 40px;
+    display: inline-block
   }
 }
+
 .module {
   border: 1px solid #f3f3f3;
   border-bottom-width: 2px;
@@ -589,443 +621,468 @@ body{
   border-radius: 4px;
   background-clip: padding-box;
 }
+
 .module .module-footer {
   background: #fff;
   border-top: 1px solid #f3f3f7;
   padding: 15px;
 }
+
 .module .module-footer a {
   color: #9499a3;
 }
+
 /*wallet*/
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,600|Roboto:300,400');
 
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 body {
-   position: absolute;
-   top: 0px;
-   left: 0px;
-    margin: 0;
-    -webkit-font-smoothing:antialiased;
-    -moz-osx-font-smoothing:grayscale;
-    background-color: #4856d8;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #4856d8;
 }
 
 h2 {
-    margin: 0px;
-    margin-bottom: 20px;
-    font-weight: 400;
-    color: #707584;
-    font: 24px/24px 'Open Sans', sans-serif;
+  margin: 0px;
+  margin-bottom: 20px;
+  font-weight: 400;
+  color: #707584;
+  font: 24px/24px 'Open Sans', sans-serif;
 }
 
 h3 {
-    margin: 0px 0px 5px;
-    font-weight: 600;
-    font-size: 18px;
-    line-height: 18px;
+  margin: 0px 0px 5px;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 18px;
 }
 
 .wrapper {
-    width: 800px;
-    font-family: 'Open Sans', sans-serif;
-    padding: 30px 10px;
+  width: 800px;
+  font-family: 'Open Sans', sans-serif;
+  padding: 30px 10px;
 }
 
 .app-wrapper {
-    background-color: #fff;
-    height: 700px;
-    max-width: 880px;
-    margin: 0 auto;
-    border-radius: 8px;
-    display: flex;
+  background-color: #fff;
+  height: 700px;
+  max-width: 880px;
+  margin: 0 auto;
+  border-radius: 8px;
+  display: flex;
 
-    -webkit-box-shadow: 0px 8px 24px 4px #fff;
-    -moz-box-shadow: 0px 8px 24px 4px #fff;
-    box-shadow: 0px 8px 24px 4px #fff;
+  -webkit-box-shadow: 0px 8px 24px 4px #fff;
+  -moz-box-shadow: 0px 8px 24px 4px #fff;
+  box-shadow: 0px 8px 24px 4px #fff;
 }
 
 .wallet {
-    width: 360px;
-    background-color: #f2f2f2;
-    height: 100%;
-    border-top-left-radius: inherit;
-    border-bottom-left-radius: inherit;
-    padding: 50px;
+  width: 360px;
+  background-color: #f2f2f2;
+  height: 100%;
+  border-top-left-radius: inherit;
+  border-bottom-left-radius: inherit;
+  padding: 50px;
 }
 
 .wallet h2 {
-    display:inline-block;
+  display: inline-block;
 }
 
 .transactions-wrapper {
-    width: 520px;
-    padding: 50px;
+  width: 520px;
+  padding: 50px;
 }
 
 .total-balance {
-    float: right;
-    font-weight: 600;
-    font-size: 32px;
-    color: #444750;
+  float: right;
+  font-weight: 600;
+  font-size: 32px;
+  color: #444750;
 }
+
 .total-balance::before {
-    content: '$';
+  content: '$';
 }
 
 .transactions {
-    margin-top: 30px;
-    border-top: 1px solid #e5e5e5;
-    padding-top: 50px;
-    height: 550px;
-    overflow: scroll;
+  margin-top: 30px;
+  border-top: 1px solid #e5e5e5;
+  padding-top: 50px;
+  height: 550px;
+  overflow: scroll;
 }
 
 .transactions.show {
-    animation: fade-in .3s 1;
+  animation: fade-in .3s 1;
 }
 
 .transactions::-webkit-scrollbar {
-    display: none;
+  display: none;
 }
 
 .transaction-item {
-    margin-bottom: 45px;
+  margin-bottom: 45px;
 }
 
 .transaction-item {
-    padding-left: 40px;
-    position: relative;
-    display: flex;
+  padding-left: 40px;
+  position: relative;
+  display: flex;
 }
+
 .transaction-item::before {
-    position: absolute;
-    content: '';
-    border: 2px solid #e1e1e1;
-    border-radius: 50%;
-    height: 25px;
-    width: 25px;
-    left: 0px;
-    top: 10px;
-    box-sizing: border-box;
-    box-sizing: border-box;
-    vertical-align: middle;
-    color: #666666;
+  position: absolute;
+  content: '';
+  border: 2px solid #e1e1e1;
+  border-radius: 50%;
+  height: 25px;
+  width: 25px;
+  left: 0px;
+  top: 10px;
+  box-sizing: border-box;
+  box-sizing: border-box;
+  vertical-align: middle;
+  color: #666666;
 }
 
 .transaction-item.credit::before {
-    content: '\002B';
-    font-size: 25px;
-    line-height: 19px;
-    padding: 0px 4px 0px;
+  content: '\002B';
+  font-size: 25px;
+  line-height: 19px;
+  padding: 0px 4px 0px;
 }
 
 .transaction-item.credit .transaction-item_amount .amount,
-.transaction-item.credit .transaction-item_amount span{
-    color: #66cc33;
+.transaction-item.credit .transaction-item_amount span {
+  color: #66cc33;
 }
 
 .transaction-item.debit::before {
-    content: '\2212';
-    font-size: 20px;
-    line-height: 21px;
+  content: '\2212';
+  font-size: 20px;
+  line-height: 21px;
   padding: 0px 5px;
 }
 
 .transaction-item.debit .transaction-item_amount .amount,
-.transaction-item.debit .transaction-item_amount span{
-    color: #8393ca;
+.transaction-item.debit .transaction-item_amount span {
+  color: #8393ca;
 }
 
 .transaction-item span.details {
-    font-size: 14px;
-    line-height: 14px;
-    color: #999;
+  font-size: 14px;
+  line-height: 14px;
+  color: #999;
 }
 
 .transaction-item_details {
-    width: 270px;
+  width: 270px;
 }
 
 .transaction-item_amount {
-    width: 110px;
-    text-align: right;
+  width: 110px;
+  text-align: right;
 }
+
 .transaction-item_amount span {
-    font-weight: 600;
-    font-size: 18px;
-    line-height: 45px;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 45px;
 }
 
 .transaction-item_amount .amount {
-    font-weight: 600;
-    font-size: 18px;
-    line-height: 45px;
-    position: relative;
-    margin: 0px;
-    display: inline-block;
-    text-indent: -15px;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 45px;
+  position: relative;
+  margin: 0px;
+  display: inline-block;
+  text-indent: -15px;
 }
 
 /* Hide + and - */
 .transaction-item_amount .amount::first-letter {
-    color: transparent !important;
+  color: transparent !important;
 }
 
 .cards {
-    margin-top: 60px;
+  margin-top: 60px;
 }
 
 .credit-card {
-      padding: 15px;
-    background-color: #fff;
-    margin-bottom: 45px;
-        border-radius: 3px;
-    border: 2px solid #e1e1e1;
-        font-family: 'Roboto', sans-serif;
-        cursor: pointer;
-        transition: .1s ease-in-out;
+  padding: 15px;
+  background-color: #fff;
+  margin-bottom: 45px;
+  border-radius: 3px;
+  border: 2px solid #e1e1e1;
+  font-family: 'Roboto', sans-serif;
+  cursor: pointer;
+  transition: .1s ease-in-out;
 }
 
 .buttonAddBalance {
-	box-shadow:inset 0px 1px 0px 0px #85a9f2;
-	background:linear-gradient(to bottom, #2462de 5%, #0d16bd 100%);
-	background-color:#2462de;
-	border-radius:6px;
-	border:1px solid #113dbf;
-	display:inline-block;
-	cursor:pointer;
-	color:#ffffff;
-	font-family:Arial;
-	font-size:15px;
-	font-weight:bold;
-	padding:6px 24px;
-	text-decoration:none;
-	text-shadow:0px 1px 0px #4016b3;
+  box-shadow: inset 0px 1px 0px 0px #85a9f2;
+  background: linear-gradient(to bottom, #2462de 5%, #0d16bd 100%);
+  background-color: #2462de;
+  border-radius: 6px;
+  border: 1px solid #113dbf;
+  display: inline-block;
+  cursor: pointer;
+  color: #ffffff;
+  font-family: Arial;
+  font-size: 15px;
+  font-weight: bold;
+  padding: 6px 24px;
+  text-decoration: none;
+  text-shadow: 0px 1px 0px #4016b3;
 }
+
 .buttonAddBalance:hover {
-	background:linear-gradient(to bottom, #0d16bd 5%, #2462de 100%);
-	background-color:#0d16bd;
+  background: linear-gradient(to bottom, #0d16bd 5%, #2462de 100%);
+  background-color: #0d16bd;
 }
+
 .buttonAddBalance:active {
-	position:relative;
-	top:1px;
+  position: relative;
+  top: 1px;
 }
 
 .credit-card:hover {
-    transform: scale(1.07);
+  transform: scale(1.07);
 }
 
 .credit-card.active {
-    border-color: #8393ca;
-    border-width: 3px;
+  border-color: #8393ca;
+  border-width: 3px;
 }
 
 .card-image {
-    display: inline-block;
-    height: 40px;
-    width: 58px;
-    background-repeat: no-repeat;
-    background-size: cover;
-    border-radius: 3px;
-    margin-bottom: 10px;
+  display: inline-block;
+  height: 40px;
+  width: 58px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 3px;
+  margin-bottom: 10px;
 }
 
 .credit-card.visa .card-image,
 .card-image.visa {
-    background-image: url("https://dl.dropboxusercontent.com/s/lwvqznj7lwwkrkk/visa.png?dl=0");
+  background-image: url("https://dl.dropboxusercontent.com/s/lwvqznj7lwwkrkk/visa.png?dl=0");
 }
 
 .credit-card.amex .card-image,
 .card-image.amex {
-    background-image: url('https://dl.dropboxusercontent.com/s/e3toeu643kc4xqr/amex.png?dl=0');
+  background-image: url('https://dl.dropboxusercontent.com/s/e3toeu643kc4xqr/amex.png?dl=0');
 }
 
 .credit-card.mc .card-image,
 .card-image.mc {
-    background-image: url('https://dl.dropboxusercontent.com/s/8uh687u5tcchz9s/mastercard.png?dl=0');
+  background-image: url('https://dl.dropboxusercontent.com/s/8uh687u5tcchz9s/mastercard.png?dl=0');
 }
 
 .credit-card_expiration {
-    color: #b3b3b3;
+  color: #b3b3b3;
 }
 
 .credit-card_number {
-    color: #666666;
+  color: #666666;
 }
 
 .card-list {
-    margin-top: 20px;
+  margin-top: 20px;
 }
 
 .card-list .card-image {
-    cursor: pointer;
-    margin-right: 15px;
-    transition: .1s;
+  cursor: pointer;
+  margin-right: 15px;
+  transition: .1s;
 }
 
 .card-list .card-image:hover {
-    transform: scale(1.1);
+  transform: scale(1.1);
 }
 
 .modal {
-    display: none;
-    text-align: center;
-    transition: .2s;
+  display: none;
+  text-align: center;
+  transition: .2s;
 }
 
-.modal.background{
-  display:block;
+.modal.background {
+  display: block;
   position: fixed;
   width: 100vw;
   height: 100vh;
-  background-color: rgba(0,0,0,0.7);
+  background-color: rgba(0, 0, 0, 0.7);
   z-index: 1;
   top: 0;
   left: 0;
 }
 
 .modal.open {
-    display: block;
+  display: block;
 }
 
 .modal-body {
-    background-color: #fff;
-    border-radius: 5px;
-    padding: 35px 15px 25px;
-    z-index: 2;
-    display: inline-block;
-    margin-top: 5%;
-    width: 100%;
-    max-width: 700px;
-    position: relative;
+  background-color: #fff;
+  border-radius: 5px;
+  padding: 35px 15px 25px;
+  z-index: 2;
+  display: inline-block;
+  margin-top: 5%;
+  width: 100%;
+  max-width: 700px;
+  position: relative;
 }
 
 .modal-body h3 {
-    font: 20px/20px 'Open Sans', sans-serif;
-    color: #707584;
+  font: 20px/20px 'Open Sans', sans-serif;
+  color: #707584;
 }
 
 .modal-control, .modal-close {
-    float: right;
-    color: #c6cce2;
-    font-size: 45px;
-    line-height: 22px;
-    cursor: pointer;
-    transition: color .1s;
+  float: right;
+  color: #c6cce2;
+  font-size: 45px;
+  line-height: 22px;
+  cursor: pointer;
+  transition: color .1s;
 }
 
 .modal-control:hover, .modal-close:hover {
-    color: #8393ca;
+  color: #8393ca;
 }
 
 .modal-close {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    transform: rotate(45deg);
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  transform: rotate(45deg);
 }
 
 /* animations */
 @keyframes fade-in {
-    0% {
-        opacity: 0;
-    }
+  0% {
+    opacity: 0;
+  }
   100% {
     opacity: 1;
   }
 }
 
 /* media queries */
-@media(max-width:810px) {
-    .wrapper {
-        border-radius: 8px;
-    }
-    .wallet {
-        width: 100%;
-        border-top-right-radius: inherit;
-        padding-bottom: 25px;
-    }
-    .cards {
-        margin-top: 25px;
-    }
-    .app-wrapper {
-        -webkit-flex-direction: column;
+@media (max-width: 810px) {
+  .wrapper {
+    border-radius: 8px;
+  }
+
+  .wallet {
+    width: 100%;
+    border-top-right-radius: inherit;
+    padding-bottom: 25px;
+  }
+
+  .cards {
+    margin-top: 25px;
+  }
+
+  .app-wrapper {
+    -webkit-flex-direction: column;
     flex-direction: column;
-        width: 100%;
-        border-top-right-radius: inherit;
-        height: initial;
-    }
-    .credit-card {
-        width: calc(50% - 25px);
+    width: 100%;
+    border-top-right-radius: inherit;
+    height: initial;
+  }
+
+  .credit-card {
+    width: calc(50% - 25px);
     max-width: 260px;
     display: inline-block;
     margin-right: 25px;
-        margin-bottom: 25px;
+    margin-bottom: 25px;
     text-align: left;
-    }
-    .form-background {
-        width: calc(50% - 25px);
+  }
+
+  .form-background {
+    width: calc(50% - 25px);
     max-width: 260px;
     display: inline-block;
     margin-right: 25px;
-        margin-bottom: 25px;
+    margin-bottom: 25px;
     text-align: left;
     opacity: 0;
     height: 94px;
-    }
-    .credit-card:nth-of-type(2) {
-        margin-right: 0px;
-    }
-    .transactions {
-        height: initial;
-    }
-    .transactions-wrapper {
-        width: 100%;
-    }
-    .transaction-item_amount {
-        width: calc(100% - 270px);
-    }
+  }
+
+  .credit-card:nth-of-type(2) {
+    margin-right: 0px;
+  }
+
+  .transactions {
+    height: initial;
+  }
+
+  .transactions-wrapper {
+    width: 100%;
+  }
+
+  .transaction-item_amount {
+    width: calc(100% - 270px);
+  }
 }
 
-@media(max-width:530px) {
-    h3 {
-        line-height: 24px;
-    }
-    .cards {
-        text-align: center;
-    }
-    .credit-card {
-        width: calc(100% - 25px);
+@media (max-width: 530px) {
+  h3 {
+    line-height: 24px;
+  }
+
+  .cards {
+    text-align: center;
+  }
+
+  .credit-card {
+    width: calc(100% - 25px);
     max-width: 260px;
-    }
-    .credit-card:nth-of-type(2) {
-        margin-right: 25px;
-    }
-    .credit-card:last-of-type {
-        margin-bottom: 0px;
-    }
-    .total-balance {
-            font-size: 22px;
-    }
-    .transaction-item_amount {
-        width: 110px;
-    }
+  }
+
+  .credit-card:nth-of-type(2) {
+    margin-right: 25px;
+  }
+
+  .credit-card:last-of-type {
+    margin-bottom: 0px;
+  }
+
+  .total-balance {
+    font-size: 22px;
+  }
+
+  .transaction-item_amount {
+    width: 110px;
+  }
 }
 
-@media(max-width: 390px) {
-    .wallet {
-        padding: 50px 25px;
-    }
-    .transactions-wrapper {
-        padding: 50px 25px;
-    }
-    h2 {
-        font: 18px/24px 'Open Sans', sans-serif;
-    }
+@media (max-width: 390px) {
+  .wallet {
+    padding: 50px 25px;
+  }
+
+  .transactions-wrapper {
+    padding: 50px 25px;
+  }
+
+  h2 {
+    font: 18px/24px 'Open Sans', sans-serif;
+  }
 }
 
 

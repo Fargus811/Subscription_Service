@@ -22,7 +22,7 @@
   top: 5px;
   vertical-align: middle;
   float: left;
-  margin-right:85px;
+  margin-right: 85px;
 
   font-family: Roboto;
   font-style: normal;
@@ -34,7 +34,8 @@
   box-sizing: unset;
   color: #FFFFFF;
 }
-.userbox{
+
+.userbox {
   position: absolute;
   width: 218px;
   height: 148px;
@@ -44,14 +45,16 @@
   visibility: hidden;
   transition: all 0.5s ease 0.5s;
 }
-.profileimg{
+
+.profileimg {
   position: absolute;
   width: 50px;
   float: right;
   margin-left: 1200px;
   background-color: #00034F;
 }
-.username{
+
+.username {
   position: relative;
   width: fit-content;
   cursor: pointer;
@@ -68,9 +71,9 @@
   color: azure;
 
 }
-.username:hover~.userbox,
-.userbox:hover
-{
+
+.username:hover ~ .userbox,
+.userbox:hover {
   visibility: visible;
   transition: all 0.5s ease-in-out 0s;
 }

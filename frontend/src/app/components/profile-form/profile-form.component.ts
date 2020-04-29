@@ -1,7 +1,7 @@
-import { Component, OnInit } from '@angular/core';
-import { Location } from '@angular/common';
-import { Router } from '@angular/router';
-import { LocalstorageService } from '../../services/localstorage.service';
+import {Component, OnInit} from '@angular/core';
+import {Location} from '@angular/common';
+import {Router} from '@angular/router';
+import {LocalstorageService} from '../../services/localstorage.service';
 
 @Component({
   selector: 'app-profile-form',
@@ -19,9 +19,9 @@ export class ProfileFormComponent implements OnInit {
     private sessionstorage: LocalstorageService,
     private location: Location,
     private router: Router) {
-      this.router.events.subscribe(
-        () => this.changeLocation());
-     }
+    this.router.events.subscribe(
+      () => this.changeLocation());
+  }
 
   ngOnInit(): void {
     const token = localStorage.getItem('token');

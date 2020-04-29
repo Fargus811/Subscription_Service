@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import { users } from '../../../assets/users';
+import {Component, OnInit} from '@angular/core';
+import {users} from '../../../assets/users';
 
 @Component({
   selector: 'app-control-panel',
@@ -8,14 +8,14 @@ import { users } from '../../../assets/users';
 })
 export class ControlPanelComponent implements OnInit {
   users: any;
-  constructor(
-  ) {
+
+  constructor() {
   }
 
   ngOnInit(): void {
     this.users = [];
     for (let key in users) {
-     this.users.push(users[key]);
+      this.users.push(users[key]);
     }
   }
 }

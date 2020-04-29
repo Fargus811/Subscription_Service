@@ -2,7 +2,8 @@
   height: 50px;
   background: white;
 }
-.string{
+
+.string {
 
   position: absolute;
   width: 100%;
@@ -22,114 +23,122 @@
 .header-text {
   text-align: center;
 
-font-family: Roboto;
-font-style: normal;
-font-weight: bold;
-font-size: 40px;
-line-height: 40px;
-/* identical to box height */
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 40px;
+  line-height: 40px;
+  /* identical to box height */
 
-letter-spacing: 0.04em;
+  letter-spacing: 0.04em;
 
-color: #000000;
-width: 100%
+  color: #000000;
+  width: 100%
 }
 
-.linetowatch{
-position: absolute;
-width: fit-content;
-height: 200px;
-left: 505px;
-top: 575px;
+.linetowatch {
+  position: absolute;
+  width: fit-content;
+  height: 200px;
+  left: 505px;
+  top: 575px;
 
-font-family: Roboto;
-font-style: normal;
-font-weight: 900;
-font-size: 60px;
-line-height: 80px;
-letter-spacing: 0.04em;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 900;
+  font-size: 60px;
+  line-height: 80px;
+  letter-spacing: 0.04em;
 
-color: #000000;
+  color: #000000;
 
 }
-.circle{
-position: absolute;
-width: 360px;
-height: 360px;
-border-radius: 180px;
-left: 83px;
-top: 520px;
-overflow: hidden;
+
+.circle {
+  position: absolute;
+  width: 360px;
+  height: 360px;
+  border-radius: 180px;
+  left: 83px;
+  top: 520px;
+  overflow: hidden;
 }
 
 .backlayer {
 
-position: absolute;
-width: 100%;
-height: 320px;
-left: 0px;
-top: 540px;
+  position: absolute;
+  width: 100%;
+  height: 320px;
+  left: 0px;
+  top: 540px;
 
-background: rgba(196, 196, 196, 0.46);
+  background: rgba(196, 196, 196, 0.46);
 }
-.linetowatch.description{
+
+.linetowatch.description {
   margin-top: 1px;
   margin-left: 350px;
-resize: vertical;
-max-width: 400px;
-font-family: Roboto;
-font-style: normal;
-font-weight: 900;
-font-size: 16px;
-line-height: 15px;
-letter-spacing: 0.04em;
+  resize: vertical;
+  max-width: 400px;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 900;
+  font-size: 16px;
+  line-height: 15px;
+  letter-spacing: 0.04em;
 
-color: #000000;
+  color: #000000;
 }
-.startitnow{
+
+.startitnow {
   position: absolute;
-width: 100%;
-height: 61px;
-top: 1000px;
+  width: 100%;
+  height: 61px;
+  top: 1000px;
 }
 
 .startitnow.second {
-  top:1250px;
+  top: 1250px;
 }
 
 .column {
   width: 15%;
   padding: 10px;
 }
+
 row::after {
   content: "";
   clear: both;
   display: table;
   height: 300px;
 }
-  .overlay {
-      position: relative;
-      top: 50%;
-      left: 50%;
-      height: 50px;
-      width: 50px;
-      border-radius: 25px;
-      opacity: 0;
-      margin: -25px;
-      overflow: hidden;
-      transition: .3s ease;
-  }
-  .col-2:hover .overlay{
-    opacity: 1;
-  }
-  .play-button {
-    position: relative;
-    z-index: 1;
-    width: 67px;
-    height: 65px;
-    top: -7.5px;
-    left: -8px;
-  }
+
+.overlay {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  height: 50px;
+  width: 50px;
+  border-radius: 25px;
+  opacity: 0;
+  margin: -25px;
+  overflow: hidden;
+  transition: .3s ease;
+}
+
+.col-2:hover .overlay {
+  opacity: 1;
+}
+
+.play-button {
+  position: relative;
+  z-index: 1;
+  width: 67px;
+  height: 65px;
+  top: -7.5px;
+  left: -8px;
+}
+
 .blur-block {
   position: relative;
   width: 200%;
@@ -139,6 +148,7 @@ row::after {
   -webkit-filter: blur(15px);
   filter: blur(15px);
 }
+
 .blur-block.bottom-part {
   top: -300px;
   height: 110px;
@@ -149,16 +159,16 @@ row::after {
 .partnership-landing-desc {
   text-align: center;
 
-font-family: Roboto;
-font-style: normal;
-font-weight: bold;
-font-size: 25px;
-line-height: 25px;
-/* identical to box height */
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 25px;
+  line-height: 25px;
+  /* identical to box height */
 
-letter-spacing: 0.04em;
+  letter-spacing: 0.04em;
 
-color: #000000;
+  color: #000000;
 }
 
 .partnership-landing-icon {
@@ -172,7 +182,7 @@ color: #000000;
   margin-bottom: 25px;
 }
 
-.partnership-landing-icon-image{
+.partnership-landing-icon-image {
   position: relative;
   width: 153px;
   height: 153px;
@@ -180,13 +190,15 @@ color: #000000;
   top: calc(50% - 76.5px);
 }
 
-.partnership-landing-icon#icon-1{
+.partnership-landing-icon#icon-1 {
   background-color: #CB6E6E
 }
-.partnership-landing-icon#icon-2{
+
+.partnership-landing-icon#icon-2 {
   background-color: #6ECB9E
 }
-.partnership-landing-icon#icon-3{
+
+.partnership-landing-icon#icon-3 {
   background-color: #A193D9
 }
 
