@@ -1,5 +1,6 @@
-import {Component, OnInit} from '@angular/core';
-import {FormBuilder, FormGroup} from '@angular/forms';
+import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormGroup } from '@angular/forms' ;
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 
 @Component({
   selector: 'app-service-form',
@@ -9,34 +10,30 @@ import {FormBuilder, FormGroup} from '@angular/forms';
 export class ServiceFormComponent implements OnInit {
   serviceFormGroup: FormGroup;
   inputs = [3];
+  fields: number;
+  fieldsList = [this.fields];
 
-  constructor(private formBuilder: FormBuilder) {
-  }
+  constructor(private formBuilder: FormBuilder, private httpClient: HttpClient) { }
 
   ngOnInit(): void {
-    this.serviceFormGroup = this.formBuilder.group({
-      serviceName: [],
-      costName: [],
-      fullDescription: [],
-      shortDescriptionLine1: []
-    });
+  this.serviceFormGroup = this.formBuilder.group({
+    name: [],
+    cost: [],
+    description: []
+  });
 
   }
-
-  addField() {
-    const container = document.getElementById('short-descriptions-container');
-    const formGroup = document.createElement('div');
-    formGroup.className = 'form-group';
-    const field = document.createElement('div');
-    field.className = 'fieldWithButton';
-    const input = document.createElement('input');
-    input.className = 'form-control';
-    input.setAttribute('type', 'text');
-    input.setAttribute('placeholder', 'Maximum chars 15');
-    input.setAttribute('maxlength', '15');
-    field.appendChild(input);
-    formGroup.appendChild(field);
-    container.appendChild(formGroup);
+  addField(){
+   if (this.fields <= 4) {
+     this.fields++;
+     this.fieldsList = [this.fields];
+   }
+  }
+  onSubmit() {
+    this.httpClient.post<any>('http://localhost:8080/personal/myservices/1/add', this.serviceFormGroup.value).subscribe(
+      (res) => console.log(res),
+      (err) => console.log(err)
+    );
   }
 
 }
