@@ -3,6 +3,7 @@ import {LocalstorageService} from '../../services/localstorage.service';
 import {FormBuilder, FormControl, FormGroup, Validators} from '@angular/forms';
 import {Router} from '@angular/router';
 import {LogindetectorService} from '../../services/logindetector.service';
+import {HttpClient} from '@angular/common/http';
 
 @Component({
   selector: 'app-login-page',
@@ -14,11 +15,13 @@ export class LoginPageComponent implements OnInit {
   private email: FormControl;
   private password: FormControl;
 
+
   constructor(
     private sessionstorage: LocalstorageService,
     private formBuilder: FormBuilder,
     private router: Router,
-    private loginDetector: LogindetectorService
+    private loginDetector: LogindetectorService,
+    private httpClient: HttpClient
   ) {
     this.email = new FormControl('', [Validators.required]);
     this.password = new FormControl('', [Validators.required]);
@@ -43,5 +46,11 @@ export class LoginPageComponent implements OnInit {
     } else {
       window.alert('Incorrect login or password!');
     }
+  }
+  login(){
+    this.httpClient.get(`/api/login`, this.loginForm.value).subscribe(()=>{
+      console.log("work");
+    });
+
   }
 }

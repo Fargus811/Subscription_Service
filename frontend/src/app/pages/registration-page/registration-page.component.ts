@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Validators, FormGroup, FormBuilder } from '@angular/forms';
 import { ValidationService } from '../../services/validation.service';
+import {HttpClient} from '@angular/common/http';
 
 @Component({
   selector: 'app-registration-page',
@@ -14,7 +15,8 @@ export class RegistrationPageComponent implements OnInit {
 
   constructor(
     private fb: FormBuilder,
-    private customValidator: ValidationService
+    private customValidator: ValidationService,
+    private httpClient: HttpClient
   ) { }
 
   ngOnInit() {
@@ -33,6 +35,10 @@ export class RegistrationPageComponent implements OnInit {
 
   get registerFormControl() {
     return this.registerForm.controls;
+  }
+  registration(){
+    this.httpClient.post(`/registration`, this.registerForm.value);
+    console.log(this.registerForm);
   }
 
   onSubmit() {
