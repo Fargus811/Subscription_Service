@@ -48,7 +48,7 @@ export class LoginPageComponent implements OnInit {
     }
   }
   login(){
-    this.httpClient.get(`/api/login`, this.loginForm.value).subscribe(()=>{
+    this.httpClient.post(`/api/login`, this.loginForm.value).subscribe(()=>{
       console.log("work");
     });
 

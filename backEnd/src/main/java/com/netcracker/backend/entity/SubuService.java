@@ -2,6 +2,7 @@ package com.netcracker.backend.entity;
 
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import org.hibernate.annotations.Fetch;
 
 import javax.persistence.*;
 
@@ -32,6 +33,8 @@ public class SubuService {
     @JoinColumn(name = "company_Wallet", referencedColumnName = "user_id")
     private Wallet wallet;
 
+    @Column(name = "deleted", nullable = false, columnDefinition = "false")
+    private boolean deleted;
 
 
 }
