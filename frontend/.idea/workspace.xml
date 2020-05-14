@@ -1,42 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="5a9aebec-228e-49f5-aac6-030f7574be41" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/services/subuservice.service.spec.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/services/subuservice.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../fapi/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../fapi/.mvn/wrapper/MavenWrapperDownloader.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../fapi/.mvn/wrapper/maven-wrapper.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../fapi/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../fapi/mvnw" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../fapi/mvnw.cmd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../fapi/pom.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../fapi/src/main/java/com/netcracker/fapi/AppConfig.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../fapi/src/main/java/com/netcracker/fapi/FapiApplication.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../fapi/src/main/java/com/netcracker/fapi/ServletInitializer.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../fapi/src/main/java/com/netcracker/fapi/controller/SubscriptionController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../fapi/src/main/java/com/netcracker/fapi/controller/SubuServiceController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../fapi/src/main/java/com/netcracker/fapi/controller/TransactionController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../fapi/src/main/java/com/netcracker/fapi/controller/UserController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../fapi/src/main/java/com/netcracker/fapi/controller/WalletController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../fapi/src/main/java/com/netcracker/fapi/entity/LoginRequest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../fapi/src/main/java/com/netcracker/fapi/entity/Role.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../fapi/src/main/java/com/netcracker/fapi/entity/Subscription.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../fapi/src/main/java/com/netcracker/fapi/entity/SubuService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../fapi/src/main/java/com/netcracker/fapi/entity/Transaction.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../fapi/src/main/java/com/netcracker/fapi/entity/User.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../fapi/src/main/java/com/netcracker/fapi/entity/UserViewModel.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../fapi/src/main/java/com/netcracker/fapi/entity/Wallet.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../fapi/src/main/java/com/netcracker/fapi/mapper/UserMapper.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../fapi/src/main/java/com/netcracker/fapi/service/SubscriptionService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../fapi/src/main/java/com/netcracker/fapi/service/SubuServiceService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../fapi/src/main/java/com/netcracker/fapi/service/TransactionService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../fapi/src/main/java/com/netcracker/fapi/service/UserService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../fapi/src/main/java/com/netcracker/fapi/service/WalletService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../fapi/src/main/resources/application.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../fapi/src/test/java/com/netcracker/fapi/FapiApplicationTests.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="5a9aebec-228e-49f5-aac6-030f7574be41" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/dist/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
