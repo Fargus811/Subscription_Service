@@ -19,6 +19,9 @@ public class Wallet {
     @JoinColumn(name = "user_id", referencedColumnName = "id")
     private User user;
 
+    @Column(name = "name", nullable = false)
+    private String name;
+
     @Column(name = "balance")
     private double balance;
 

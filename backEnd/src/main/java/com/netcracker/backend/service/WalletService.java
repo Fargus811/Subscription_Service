@@ -1,10 +1,10 @@
 package com.netcracker.backend.service;
 
 import com.netcracker.backend.entity.Wallet;
-import com.netcracker.backend.exception.TransactionException;
 import com.netcracker.backend.repository.UserRepository;
 import com.netcracker.backend.repository.WalletRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.PageRequest;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -19,10 +19,12 @@ public class WalletService {
     private UserRepository userRepository;
 
     @Autowired
+    private UserService userService;
+    @Autowired
     TransactionService transactionService;
 
-    public List<Wallet> findWalletsByUser(Long id) {
-        return walletRepository.findWalletsByUser(id);
+    public List<Wallet> findWalletsByUser(Long id, int page) {
+        return walletRepository.findWalletsByUser(userService.findUserById(id), PageRequest.of(page, 10));
     }
 
     public void addFunds(Long id, Double amount) {
@@ -33,26 +35,27 @@ public class WalletService {
     }
 
     public void addWallet(Wallet wallet, Long id) {
+        wallet.setCurrency("$");
         wallet.setUser(userRepository.findUserById(id));
         walletRepository.save(wallet);
     }
 
-    public double findAllUserCash(Long id) {
-        double userCash = 0;
-        for (Wallet wallet : walletRepository.findWalletsByUser(id)) {
-            userCash += wallet.getBalance();
+    public boolean transferFunds(Long senderWalletId, Long receiverWalletId, Double amount) {
+        Wallet senderWallet = walletRepository.findById(senderWalletId).get();
+        boolean transfered;
+        if (senderWallet.getBalance() < amount) {
+            transfered = false;
+        } else {
+            transactionService.createTransaction(senderWalletId, receiverWalletId, amount);
+            senderWallet.setBalance(senderWallet.getBalance() - amount);
+            walletRepository.save(senderWallet);
+            transfered = true;
         }
-        return userCash;
+        return transfered;
     }
 
-    public void transferFunds(Long senderWalletId, Long receiverWalletId, Double amount) {
-        Wallet senderWallet = walletRepository.findById(senderWalletId).get();
-        if (senderWallet.getBalance() < amount) {
-            throw new TransactionException("Not enough money on the wallet");
-        }
-        transactionService.createTransaction(senderWalletId, receiverWalletId, amount);
-        senderWallet.setBalance(senderWallet.getBalance() - amount);
-        walletRepository.save(senderWallet);
+    public Wallet findWalletById(Long id) {
+        return walletRepository.findWalletsById(id);
     }
 
 }

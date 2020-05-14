@@ -1,13 +1,21 @@
 <div class="wrapper">
   <div class="app-wrapper">
     <!--Wallet-->
-    <aside class="wallet" id="wallet-container">
-      <h2>My Wallets</h2>
-      <div class="modal-control" (click)="addNewWallet()">+</div>
-      <div *ngFor="let card of cards" class="credit-card" (click)="displayWalletTransactions(card.id)">
-        <div class="wallet-name">{{card.name}}</div>
-        <div class="wallet-balance">{{card.balance}}</div>
-        <div class="wallet-currency">{{card.currency}}</div>
+    <aside class="wallet">
+      <div class="wallet-container-head">
+        <h2>My Wallets</h2>
+        <div class="modal-control" (click)="addNewWallet()">+</div>
+      </div>
+      <div class="wallet-container" id="wallet-container">
+        <div id="wallet-entry-form" class="credit-card" style="display: none;">
+          <input name="wallet-name" class="wallet-name" maxlength="20" style="width:100%" (change)="createWallet($event)">
+          <button class="cancel-button">Cancel creation</button>
+        </div>
+        <div *ngFor="let card of cards" class="credit-card" (click)="displayWalletTransactions(card.id)">
+          <div class="wallet-name">{{card.name}}</div>
+          <div class="wallet-balance">{{card.balance}}</div>
+          <div class="wallet-currency">{{card.currency}}</div>
+        </div>
       </div>
     </aside>
 
@@ -20,15 +28,20 @@
       <div class="transactions" id="transactions">
         <div *ngFor="let transaction of displayedCard.transactions">
           <div *ngIf="transaction.receiver !== null" class="transaction-item debit">
-            <div class="transaction-item_details"><h2>{{transaction.receiver}}</h2><span>{{transaction.date}}</span>
+            <div class="transaction-item_details">
+              <h2>{{transaction.receiver}}</h2><span>{{transaction.date}}</span>
             </div>
             <div class="transaction-item_amount"><span>$</span>
-              <p class="amount">0{{transaction.value}}</p></div>
+              <p class="amount">0{{transaction.value}}</p>
+            </div>
           </div>
           <div *ngIf="transaction.source !== null" class="transaction-item credit">
-            <div class="transaction-item_details"><h2>{{transaction.source}}</h2><span>{{transaction.date}}</span></div>
+            <div class="transaction-item_details">
+              <h2>{{transaction.source}}</h2><span>{{transaction.date}}</span>
+            </div>
             <div class="transaction-item_amount"><span>$</span>
-              <p class="amount">0{{transaction.value}}</p></div>
+              <p class="amount">0{{transaction.value}}</p>
+            </div>
           </div>
         </div>
       </div>

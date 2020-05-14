@@ -1,15 +1,16 @@
 package com.netcracker.backend.repository;
 
 import com.netcracker.backend.entity.User;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.data.repository.PagingAndSortingRepository;
 
-import java.util.List;
+public interface UserRepository extends PagingAndSortingRepository<User, Long> {
 
-public interface UserRepository extends PagingAndSortingRepository<User,Long> {
-
-    List<User> findUserByName(String name);
-
-    List<User> findAll();
+    Page<User> findAll(Pageable pageable);
 
     User findUserById(Long id);
+
+    User findUserByEmail(String email);
+
 }

@@ -15,8 +15,8 @@ public class TransactionController {
     @Autowired
     private TransactionService transactionService;
 
-    @GetMapping("/user/wallets/transactions/{walletId}")
+    @GetMapping("/user/wallets/{walletId}")
     public List<Transaction> findTransactionsBySenderAndReceiver(@PathVariable Long walletId) {
-        return transactionService.findTransactionsBySenderAndReceiver(walletId , walletId);
+        return transactionService.findTransactionsBySenderAndReceiver(walletId);
     }
 }

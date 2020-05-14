@@ -1,5 +1,6 @@
 package com.netcracker.backend.entity;
 
+import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
@@ -25,14 +26,8 @@ public class Subscription {
     @JoinColumn(name = "user_id", referencedColumnName = "id")
     private User user;
 
-    @Column(name = "active", nullable = false)
-    private boolean status;
-
-    @Column(name = "startDate", nullable = false)
-    private Date startDate;
-
-    @Column(name = "endDate")
-    private Date endDate;
+    @Column(name = "status")
+    private boolean status = true;
 
     @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "wallet_id", referencedColumnName = "id")

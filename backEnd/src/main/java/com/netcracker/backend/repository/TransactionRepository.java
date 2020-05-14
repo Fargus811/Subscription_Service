@@ -10,4 +10,5 @@ public interface TransactionRepository extends PagingAndSortingRepository<Transa
     List<Transaction> findTransactionsBySenderAndReceiver(Long senderId,Long receiverId);
 
 
+
 }

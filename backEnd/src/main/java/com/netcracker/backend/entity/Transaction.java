@@ -21,7 +21,7 @@ public class Transaction {
     @OneToOne(fetch = FetchType.EAGER )
     @JoinColumn(name = "sender", referencedColumnName = "id")
     private Wallet sender;
-    @Column(name = "amount", nullable = false)
+    @Column(name = "amount")
     private Double amount;
     @Column(name = "date")
     private Date date;

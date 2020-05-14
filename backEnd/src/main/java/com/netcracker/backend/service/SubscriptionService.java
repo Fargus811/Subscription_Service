@@ -4,8 +4,10 @@ import com.netcracker.backend.entity.Subscription;
 import com.netcracker.backend.entity.Wallet;
 import com.netcracker.backend.repository.SubscriptionRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.PageRequest;
 import org.springframework.stereotype.Service;
 
+import java.math.BigInteger;
 import java.util.Date;
 import java.util.List;
 
@@ -20,27 +22,39 @@ public class SubscriptionService {
     @Autowired
     private SubuServiceService subuServiceService;
 
-    public List<Subscription> findSubscriptionByUser(Long id) {
-        return subscriptionRepository.findSubscriptionsByUser(id);
+    @Autowired
+    private UserService userService;
+
+    @Autowired
+    private TransactionService transactionService;
+
+    public List<Subscription> findSubscriptionByUser(Long id, int page) {
+        return subscriptionRepository.findSubscriptionsByUser(userService.findUserById(id), PageRequest.of(page, 10));
     }
 
     public void unsubscribe(Long id) {
         Subscription subscriptionDB = subscriptionRepository.findById(id).get();
-        delete(subscriptionDB);
+        unsubscribeByUser(subscriptionDB);
         if (isNotPaidForToday(subscriptionDB)) {
             payForDay(subscriptionDB);
         }
     }
 
-    public void delete(Subscription subscription){
+    public void unsubscribeByUser(Subscription subscription) {
         subscription.setStatus(false);
         subscriptionRepository.save(subscription);
     }
 
-    public void payForDay(Subscription subscriptionDB) {
+    public boolean payForDay(Subscription subscriptionDB) {
         Wallet companyWallet = getCompanyWallet(subscriptionDB);
-        double dailyPayment = subuServiceService.calculateDailyPayment(subscriptionDB.getSubuService());
-        walletService.transferFunds(subscriptionDB.getWallet().getId(), companyWallet.getId(), dailyPayment);
+        double cost = subscriptionDB.getSubuService().getCost();
+        boolean transfered = walletService.transferFunds(subscriptionDB.getWallet().getId(),
+                companyWallet.getId(), cost);
+        if (transfered) {
+            subscriptionDB.setLastPaidDate(new Date());
+            subscriptionRepository.save(subscriptionDB);
+        }
+        return transfered;
     }
 
     public List<Subscription> findAll() {
@@ -48,18 +62,23 @@ public class SubscriptionService {
     }
 
     private Wallet getCompanyWallet(Subscription subscriptionDB) {
-        Long companyUserId = subscriptionDB.getSubuService().getUser().getId();
-        List<Wallet> companyWallets = walletService.findWalletsByUser(companyUserId);
-        return companyWallets.get(0);
+         return subscriptionDB.getSubuService().getWallet();
     }
 
     private boolean isNotPaidForToday(Subscription subscriptionDB) {
         return subscriptionDB.getLastPaidDate().before(new Date());
     }
 
-    public List<Subscription> findAllBySubuService(Long id) {
-        return subscriptionRepository.findAllBySubuService(id);
+    public BigInteger countBySubuService(Long id) {
+        return subscriptionRepository.countBySubuService(subuServiceService.findSubuServiceById(id));
     }
 
 
+    public boolean subscribe(Long userId, Long serviceId, Long walletId) {
+        Subscription subscription = new Subscription();
+        subscription.setSubuService(subuServiceService.findSubuServiceById(serviceId));
+        subscription.setUser(userService.findUserById(userId));
+        subscription.setWallet(walletService.findWalletById(walletId));
+        return payForDay(subscription);
+    }
 }

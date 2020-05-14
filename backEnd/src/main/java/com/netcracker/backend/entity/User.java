@@ -11,15 +11,18 @@ import javax.persistence.*;
 @NoArgsConstructor
 public class User {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "id", updatable = false, nullable = false)
+    @GeneratedValue
+    @Column(name = "id")
     private Long id;
 
-    @Column(name = "name", nullable = false, length = 20)
+    @Column(name = "name", nullable = false, length = 50)
     private String name;
 
-    @Column(name = "mail", nullable = false, length = 50)
+    @Column(name = "mail", nullable = false, length = 70)
     private String email;
+
+    @Column(name = "password", nullable = false)
+    private String password;
 
     @ManyToOne(fetch = FetchType.EAGER )
     @JoinColumn(name = "role_id", referencedColumnName = "id")

@@ -18,8 +18,8 @@ public class TransactionService {
     @Autowired
     private WalletRepository walletRepository;
 
-    public List<Transaction> findTransactionsBySenderAndReceiver(Long senderId, Long receiverId) {
-        return transactionRepository.findTransactionsBySenderAndReceiver(senderId, receiverId);
+    public List<Transaction> findTransactionsBySenderAndReceiver(Long walletId) {
+        return transactionRepository.findTransactionsBySenderAndReceiver(walletId, walletId );
     }
 
     public Transaction createTransaction(Long senderWalletId, Long receiverWalletId, Double amount) {

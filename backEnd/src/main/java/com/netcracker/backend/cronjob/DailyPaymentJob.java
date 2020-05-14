@@ -15,14 +15,14 @@ public class DailyPaymentJob {
     @Autowired
     private SubscriptionService subscriptionService;
 
-    @Scheduled(fixedRate = 3600 * 12)
+    @Scheduled( cron = "0 0 0 * * ?") //if^else
     public void work() {
         List<Subscription> subscriptions = subscriptionService.findAll();
         for (Subscription subscription : subscriptions) {
             try {
                 subscriptionService.payForDay(subscription);
             } catch (TransactionException e) {
-                subscriptionService.delete(subscription);
+                subscriptionService.unsubscribeByUser(subscription);
             }
         }
     }

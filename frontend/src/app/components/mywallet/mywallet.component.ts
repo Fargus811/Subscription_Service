@@ -1,23 +1,27 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, OnInit, Renderer2} from '@angular/core';
 import {LocalstorageService} from '../../services/localstorage.service';
 import {HttpClient} from '@angular/common/http';
 import {cards} from './cards';
+import {WalletService} from '../../services/wallet.service';
 
 @Component({
   selector: 'app-mywallet',
   templateUrl: './mywallet.component.html',
   styleUrls: ['./mywallet.component.css']
 })
+
 export class MywalletComponent implements OnInit {
+  constructor(
+    private sessionstorage: LocalstorageService,
+    private http: HttpClient,
+    private renderer: Renderer2,
+    private walletService: WalletService
+  ) {
+  }
+
   user: any;
   cards: any;
   displayedCard: any;
-
-  constructor(
-    private sessionstorage: LocalstorageService,
-    private http: HttpClient
-  ) {
-  }
 
   ngOnInit(): void {
     const token = localStorage.getItem('token');
@@ -36,71 +40,36 @@ export class MywalletComponent implements OnInit {
 
   addNewWallet() {
     if (window.localStorage.getItem('newWalletInProgress') !== 'true') {
-      window.localStorage.setItem('newWalletInProgress', 'true');
-      const walletContainer = document.getElementById('wallet-container');
-      const formDiv = document.createElement('div');
-      const walletName = document.createElement('input');
-      const cancelButton = document.createElement('button');
-      formDiv.className = 'wallet-entry-form';
-      formDiv.id = 'wallet-entry-form';
-      formDiv.setAttribute(
-        'style',
-        'padding: 15px; ' +
-        'background-color: #fff; ' +
-        'margin-bottom: 45px; ' +
-        'border-radius: 3px; ' +
-        'border: 2px solid #e1e1e1; ' +
-        'font-family: \'Roboto\', sans-serif; ' +
-        'cursor: pointer; ' +
-        'height: 94px; '
-      );
-      walletName.className = 'wallet-name';
-      walletName.setAttribute('name', 'wallet-name');
-      walletName.setAttribute('style', 'width: 100%');
-      walletName.setAttribute('maxlength', '20');
-      cancelButton.className = 'cancel-button';
-      cancelButton.id = 'wallet-cancel-button';
-      cancelButton.innerHTML = 'Cancel creation';
-      cancelButton.setAttribute(
-        'style',
-        'background: none; ' +
-        'border: 1px solid; ' +
-        'border-color: salmon; ' +
-        'color: salmon; ' +
-        'border-radius: 4px; ' +
-        'margin-top: 10px; ' +
-        'float: right;'
-      );
-      formDiv.appendChild(walletName);
-      formDiv.appendChild(cancelButton);
-      walletContainer.insertBefore(formDiv, walletContainer.childNodes[2]);
-      walletName.addEventListener('change', this.createWallet);
+      const formDiv = this.renderer.selectRootElement('div#wallet-entry-form', true);
+      this.renderer.setStyle(formDiv, 'display', 'block');
+      const walletName = this.renderer.selectRootElement('input.wallet-name');
       walletName.focus();
       walletName.select();
     }
   }
 
-  createWallet() {
-    const formDiv = document.getElementById('wallet-entry-form');
-    const walletName = formDiv.children.namedItem('wallet-name') as HTMLInputElement;
-    console.log(walletName.value);
-    const walletNameDisplay = document.createElement('div');
-    walletNameDisplay.className = 'wallet-name';
-    walletNameDisplay.innerHTML = walletName.value;
-    const balance = document.createElement('div');
-    balance.innerHTML = '0';
-    const currency = document.createElement('div');
-    currency.innerHTML = 'USD';
-    formDiv.replaceChild(walletNameDisplay, walletName);
-    formDiv.removeChild(document.getElementById('wallet-cancel-button'));
-    formDiv.appendChild(balance);
-    formDiv.appendChild(currency);
-    formDiv.className = 'credit-card';
+  cancelCreation() {
+    const formDiv = this.renderer.selectRootElement('div#wallet-entry-form', true);
+    this.renderer.setStyle(formDiv, 'display', 'none');
+    const walletName = this.renderer.selectRootElement('input.wallet-name');
+    this.renderer.setAttribute(walletName, 'value', '');
     window.localStorage.removeItem('newWalletInProgress');
   }
 
+  createWallet(event: any) {
+    const target = event.target || event.srcElement || event.currentTarget;
+    console.log(target);
+    const name = target.value;
+    console.log(name);
+    this.walletService.createWallet(name, this.user.id);
+    this.cards = this.walletService.getUserWallets(this.user.id);
+    this.cancelCreation();
+    console.log(this.cards);
+  }
+
   displayWalletTransactions(walletId: number) {
-    for (let card of cards) {
+    console.log(this.cards);
+    for (let card of this.cards) {
       if (card.id === walletId) {
         this.displayedCard = card;
       }
